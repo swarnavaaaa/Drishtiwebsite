@@ -59,7 +59,7 @@ export function App() {
       <Navbar onOpenBooking={handleOpenBooking} />
 
       {/* Main Content */}
-      <main className="flex-grow">
+      <main className="flex-grow relative z-10">
         {/* 1. Hero */}
         <Hero onOpenBooking={handleOpenBooking} />
 
