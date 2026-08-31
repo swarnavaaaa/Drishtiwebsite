@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color: #1C1C1A;
+    background-color: #FAF8F3;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background-color: #C8D9CF;
+    color: #105133;
+  }
+}
+
+/* Custom editorial typography styling */
+.font-display {
+  font-family: 'Fraunces', 'Newsreader', Georgia, serif;
+}
+
+/* Editorial underline style */
+.editorial-underline {
+  text-decoration: underline;
+  text-decoration-color: #7F9B8D;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+/* Subtle grain overlay for bespoke texture */
+.bg-grain {
+  background-image: radial-gradient(rgba(16, 81, 51, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8D9CF;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7F9B8D;
+}
