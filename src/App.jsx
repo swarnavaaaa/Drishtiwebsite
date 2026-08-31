@@ -42,11 +42,11 @@ export function App() {
         {/* 5. About Drishti & The Studio */}
         <AboutDrishti onOpenBooking={handleOpenBooking} />
 
-        {/* 6. Proof of Work / Confidential Case Studies (Centerpiece) */}
-        <OurWork onOpenBooking={handleOpenBooking} />
-
-        {/* 7. Services & Approach */}
+        {/* 6. Services & Our Approach */}
         <Services onOpenBooking={handleOpenBooking} />
+
+        {/* 7. Proof of Work / Confidential Case Studies */}
+        <OurWork onOpenBooking={handleOpenBooking} />
 
         {/* 8. How It Works (Process) */}
         <HowItWorks />
