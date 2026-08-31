@@ -13,6 +13,7 @@ import { FAQ } from './components/FAQ';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { BookingModal } from './components/BookingModal';
+import { AmbientBackground } from './components/AmbientBackground';
 
 export function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -21,7 +22,10 @@ export function App() {
   const handleCloseBooking = () => setIsBookingOpen(false);
 
   return (
-    <div className="min-h-screen bg-cream text-charcoal flex flex-col font-sans selection:bg-mint selection:text-forest">
+    <div className="min-h-screen relative text-charcoal flex flex-col font-sans selection:bg-mint selection:text-forest overflow-x-hidden">
+      {/* Ambient background with floating gradient orbs and micro-grain texture */}
+      <AmbientBackground />
+
       {/* Top Navigation */}
       <Navbar onOpenBooking={handleOpenBooking} />
 
@@ -71,3 +75,4 @@ export function App() {
 }
 
 export default App;
+

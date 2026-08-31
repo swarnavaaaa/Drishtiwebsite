@@ -1,5 +1,6 @@
 import React from 'react';
-import { Check, ArrowRight, Sparkles } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { websiteContent } from '../data/websiteContent';
 
 export const Pricing = ({ onOpenBooking }) => {
@@ -15,11 +16,17 @@ export const Pricing = ({ onOpenBooking }) => {
   ];
 
   return (
-    <section id="pricing" className="py-16 md:py-24 bg-cream-subtle border-b border-charcoal-border/80">
+    <section id="pricing" className="py-16 md:py-24 bg-cream-subtle/70 border-b border-charcoal-border/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="max-w-3xl mb-14 space-y-3">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5 }}
+          className="max-w-3xl mb-14 space-y-3"
+        >
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-semibold uppercase tracking-wider">
             {pricing.heading}
           </div>
@@ -29,26 +36,30 @@ export const Pricing = ({ onOpenBooking }) => {
           <p className="text-sm sm:text-base text-charcoal-muted max-w-2xl">
             Retainers calibrated to your desired growth velocity. Every tier is managed with full confidentiality and bespoke voice craftsmanship.
           </p>
-        </div>
+        </motion.div>
 
         {/* 3 Pricing Tiers Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch mb-12">
           {pricing.tiers.map((tier, index) => {
             const isFeatured = tier.isPopular;
             return (
-              <div
+              <motion.div
                 key={index}
-                className={`p-8 flex flex-col justify-between transition-all relative ${
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                className={`p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 relative ${
                   isFeatured
-                    ? 'bg-forest text-cream border-2 border-forest-dark shadow-xl scale-[1.02] z-10'
-                    : 'bg-white text-charcoal border border-charcoal-border hover:border-forest/50 shadow-card'
+                    ? 'bg-forest text-cream border-2 border-forest-dark shadow-2xl scale-[1.01] lg:scale-[1.03] z-10 hover:shadow-brand-hover'
+                    : 'bg-white text-charcoal border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 shadow-card'
                 }`}
               >
                 {/* Popular Badge */}
                 {tier.badge && (
                   <div className="absolute -top-3.5 right-6">
                     <span
-                      className={`px-3 py-1 text-[11px] font-bold uppercase tracking-wider font-mono border ${
+                      className={`px-3 py-1 text-[11px] font-bold uppercase tracking-wider font-mono border shadow-2xs ${
                         isFeatured
                           ? 'bg-mint text-forest border-sage'
                           : 'bg-cream-subtle text-charcoal border-charcoal-border'
@@ -89,14 +100,14 @@ export const Pricing = ({ onOpenBooking }) => {
                   </div>
                 </div>
 
-                {/* Card Bottom CTA */}
+                {/* Card Bottom CTA (Min 48px tap target) */}
                 <div className="pt-8 mt-8 border-t border-current/15">
                   <button
                     onClick={onOpenBooking}
-                    className={`w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 text-xs font-bold uppercase tracking-wider transition-colors ${
+                    className={`w-full inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-brand ${
                       isFeatured
-                        ? 'bg-mint text-forest hover:bg-cream'
-                        : 'bg-forest text-cream hover:bg-forest-light'
+                        ? 'bg-mint text-forest hover:bg-cream active:scale-[0.99]'
+                        : 'bg-forest text-cream hover:bg-forest-light active:scale-[0.99]'
                     }`}
                   >
                     <span>{pricing.cta}</span>
@@ -110,13 +121,19 @@ export const Pricing = ({ onOpenBooking }) => {
                     Investment shared on discovery call
                   </p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
 
         {/* All Inclusions Checklist Card */}
-        <div className="p-8 bg-white border border-charcoal-border shadow-xs">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="p-7 sm:p-8 bg-white border border-charcoal-border shadow-card hover:border-forest/40 transition-colors"
+        >
           <div className="max-w-3xl mb-6">
             <h4 className="font-display text-xl text-charcoal font-medium">
               Every retainer tier includes the complete netwerked infrastructure:
@@ -134,9 +151,11 @@ export const Pricing = ({ onOpenBooking }) => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>
   );
 };
+
+export default Pricing;

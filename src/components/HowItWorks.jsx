@@ -1,15 +1,22 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { websiteContent } from '../data/websiteContent';
 
 export const HowItWorks = () => {
   const { process } = websiteContent;
 
   return (
-    <section className="py-16 md:py-24 bg-cream border-b border-charcoal-border/80">
+    <section className="py-16 md:py-24 border-b border-charcoal-border/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="max-w-3xl mb-14 space-y-3">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5 }}
+          className="max-w-3xl mb-14 space-y-3"
+        >
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-semibold uppercase tracking-wider">
             {process.heading}
           </div>
@@ -19,14 +26,18 @@ export const HowItWorks = () => {
           <p className="text-sm sm:text-base text-charcoal-muted max-w-2xl">
             Designed for busy founders who want executive output with minimal operational overhead.
           </p>
-        </div>
+        </motion.div>
 
         {/* 4 Steps Timeline Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {process.steps.map((step, index) => (
-            <div
+            <motion.div
               key={index}
-              className="p-7 bg-white border border-charcoal-border hover:border-forest/50 transition-all flex flex-col justify-between shadow-card relative group"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }}
+              className="p-7 bg-white border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between shadow-card relative group"
             >
               <div>
                 <div className="flex items-center justify-between pb-4 border-b border-charcoal-border/40 mb-4">
@@ -38,7 +49,7 @@ export const HowItWorks = () => {
                   </span>
                 </div>
 
-                <h3 className="font-sans font-bold text-lg text-charcoal tracking-tight mb-2">
+                <h3 className="font-sans font-bold text-lg text-charcoal tracking-tight mb-2 group-hover:text-forest transition-colors duration-200">
                   {step.title}
                 </h3>
 
@@ -49,13 +60,16 @@ export const HowItWorks = () => {
 
               <div className="pt-6 mt-4 border-t border-charcoal-border/30">
                 <div className="w-full h-1 bg-mint/50 overflow-hidden">
-                  <div
-                    className="h-full bg-forest transition-all duration-300 group-hover:w-full"
-                    style={{ width: `${(index + 1) * 25}%` }}
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${(index + 1) * 25}%` }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+                    className="h-full bg-forest"
                   />
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -63,3 +77,5 @@ export const HowItWorks = () => {
     </section>
   );
 };
+
+export default HowItWorks;

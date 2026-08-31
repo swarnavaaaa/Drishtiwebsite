@@ -3,7 +3,7 @@ import { LogoMark } from './LogoMark';
 import { websiteContent } from '../data/websiteContent';
 
 export const Footer = () => {
-  const { finalCta, navigation, brand } = websiteContent;
+  const { finalCta, navigation } = websiteContent;
 
   return (
     <footer className="bg-charcoal text-cream-dark py-12 border-t border-charcoal-muted/30">
@@ -14,13 +14,13 @@ export const Footer = () => {
             <LogoMark theme="dark" />
           </div>
 
-          {/* Quick links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-cream/70">
+          {/* Quick links with min 44px touch targets */}
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-6 text-xs text-cream/70">
             {navigation.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="hover:text-mint transition-colors"
+                className="inline-flex items-center min-h-[44px] px-2.5 hover:text-mint transition-colors"
               >
                 {item.label}
               </a>
@@ -28,7 +28,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/50">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/50 text-center sm:text-left">
           <p>{finalCta.copyright}</p>
           <p className="font-mono text-[11px]">
             Designed with craft for founders across industries.
@@ -38,3 +38,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;

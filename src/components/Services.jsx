@@ -1,16 +1,23 @@
 import React from 'react';
-import { Check, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { websiteContent } from '../data/websiteContent';
 
 export const Services = ({ onOpenBooking }) => {
   const { services } = websiteContent;
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-cream-subtle border-b border-charcoal-border/80">
+    <section id="services" className="py-16 md:py-24 bg-cream-subtle/60 border-b border-charcoal-border/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-14 space-y-3">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5 }}
+          className="max-w-3xl mb-14 space-y-3"
+        >
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-semibold uppercase tracking-wider">
             {services.heading}
           </div>
@@ -25,14 +32,18 @@ export const Services = ({ onOpenBooking }) => {
           <p className="text-sm sm:text-base text-charcoal-muted max-w-2xl pt-2">
             {services.description}
           </p>
-        </div>
+        </motion.div>
 
         {/* 4 Pillars Grid (Asymmetrical 2x2 with deep content) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-16">
           {services.pillars.map((pillar, index) => (
-            <div
+            <motion.div
               key={index}
-              className="p-8 bg-white border border-charcoal-border hover:border-forest/50 transition-all shadow-card flex flex-col justify-between"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }}
+              className="p-7 sm:p-8 bg-white border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 transition-all duration-200 shadow-card flex flex-col justify-between group"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between pb-4 border-b border-charcoal-border/50">
@@ -44,7 +55,7 @@ export const Services = ({ onOpenBooking }) => {
                   </span>
                 </div>
 
-                <h3 className="font-sans font-bold text-xl text-charcoal tracking-tight">
+                <h3 className="font-sans font-bold text-xl text-charcoal tracking-tight group-hover:text-forest transition-colors duration-200">
                   {pillar.title}
                 </h3>
 
@@ -64,14 +75,21 @@ export const Services = ({ onOpenBooking }) => {
 
               <div className="pt-6 mt-6 border-t border-charcoal-border/30 flex items-center justify-between">
                 <span className="text-xs font-mono text-charcoal-light">Included in all retainers</span>
+                <span className="text-xs font-mono text-forest opacity-0 group-hover:opacity-100 transition-opacity">netwerked.io</span>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Our Approach (3 Core Beliefs Callout Block) */}
-        <div className="bg-forest text-cream p-8 sm:p-12 border border-forest-dark relative overflow-hidden">
-          <div className="max-w-3xl mb-8 space-y-2">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.6 }}
+          className="bg-forest text-cream p-8 sm:p-12 border border-forest-dark relative overflow-hidden shadow-2xl"
+        >
+          <div className="max-w-3xl mb-8 space-y-2 relative z-10">
             <div className="text-xs font-mono text-mint uppercase tracking-widest">
               {services.approach.heading}
             </div>
@@ -83,9 +101,16 @@ export const Services = ({ onOpenBooking }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-sage/30">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-sage/30 relative z-10">
             {services.approach.beliefs.map((belief, idx) => (
-              <div key={idx} className="space-y-2.5 p-4 bg-forest-surface border border-sage/20">
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                className="space-y-2.5 p-5 bg-forest-surface border border-sage/20 hover:border-sage/50 transition-colors"
+              >
                 <div className="font-mono text-xs font-bold text-mint">
                   0{idx + 1}.
                 </div>
@@ -95,25 +120,27 @@ export const Services = ({ onOpenBooking }) => {
                 <p className="text-xs text-cream/80 leading-relaxed font-normal">
                   {belief.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
 
-          <div className="pt-8 mt-8 border-t border-sage/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="pt-8 mt-8 border-t border-sage/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 relative z-10">
             <p className="text-xs text-mint font-medium">
               Ready to replace generic content with authentic executive presence?
             </p>
             <button
               onClick={onOpenBooking}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-mint text-forest hover:bg-cream text-xs font-bold uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-2 min-h-[44px] px-5 py-2.5 bg-mint text-forest hover:bg-cream active:scale-[0.98] text-xs font-bold uppercase tracking-wider transition-all shadow-brand cursor-pointer"
             >
               <span>Book a Discovery Call</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>
   );
 };
+
+export default Services;
