@@ -149,97 +149,58 @@ Resonance first. Reach follows.`,
 
   ourWork: {
     heading: "Our Work",
-    subheading: "Different industries. Different voices. One hand.",
-    confidentialityNotice:
-      "Every engagement below is described by industry only, kept fully confidential. That is the standard, for every client, every time. The range speaks for itself.",
-    caseStudies: [
+    eyebrow: "Every engagement below is described by industry only, kept fully confidential.",
+    title: "Different industries. Different voices. One hand.",
+    subtitle: "Every engagement below is confidential. The range speaks for itself.",
+    closing: "Every engagement stays confidential. That is the standard, for every client, every time.",
+    items: [
       {
         id: "sports-industry",
-        category: "Sports Industry",
         title: "Sports Industry: Personal Profile and Company Pages",
-        tag: "Executive & Corporate",
         description:
           "A personal profile plus three company pages, all managed together. One consistent voice carried across an individual and his brands, all pointed the same direction.",
-        highlight: "Multi-entity positioning & coordinated narrative across 4 LinkedIn presences",
-        format: "Founder Narrative & Industry Dispatches",
-        keyOutcome: "Unified founder presence with high engagement across 3 subsidiary business pages.",
       },
       {
         id: "financial-modeling",
-        category: "Financial Modeling",
-        title: "Financial Modeling & Capital Advisory",
-        tag: "$350M+ Backed",
+        title: "Financial Modeling",
         description:
           "Models that have backed over $350 million in equity and debt raises across SaaS, renewables, and infrastructure. Content and outreach built to reach founders, CFOs, and investment teams directly.",
-        highlight: "Deep analytical credibility translated into sharp, high-resonance thought leadership",
-        format: "Breakdown of Deal Structures & Capital Strategy",
-        keyOutcome: "Direct inbound conversations with venture capital and institutional private equity partners.",
       },
       {
         id: "cross-industry",
-        category: "Cross-Industry",
         title: "Cross-Industry Voice Work",
-        tag: "Range & Tone",
         description:
           "A distinct voice, written fresh for its own audience, with its own register and rhythm. Proof that the writing adapts and stays precise wherever it goes.",
-        highlight: "Zero template carry-over. Every client receives a custom syntactic and tonal architecture",
-        format: "Adaptive Tone Mapping & Voice Calibration",
-        keyOutcome: "Distinct executive identity that sounds 100% authentic to the client.",
       },
       {
-        id: "ai-venture",
-        category: "Artificial Intelligence",
-        title: "Artificial Intelligence & Human Wisdom",
-        tag: "Emerging Tech",
+        id: "artificial-intelligence",
+        title: "Artificial Intelligence",
         description:
           "A venture building a new kind of AI centered on human wisdom and presence. Founder profile and company page run in step, building a category still being defined.",
-        highlight: "Positioning a paradigm-shifting deep tech vision without tech jargon fluff",
-        format: "Category Creation & Philosophical Tech Commentary",
-        keyOutcome: "Positioned the founder as the visionary voice in ethical, human-centric AI.",
       },
       {
         id: "staff-augmentation",
-        category: "AI & Staff Augmentation",
         title: "AI and Staff Augmentation",
-        tag: "Global Seed-Backed",
         description:
           "A seed-backed engineering company serving clients across the US, UK, Dubai, and India. Presence built around one story: a bootstrapped side hustle that became a funded company.",
-        highlight: "Founder origin story transformed into an enterprise recruitment and client trust magnet",
-        format: "Vulnerable Founder Storytelling & Scale Insights",
-        keyOutcome: "Drove inbound client demand across 4 countries with high-retention enterprise leads.",
       },
       {
         id: "sports-media",
-        category: "Sports Media & Tech",
         title: "Sports Media, Consulting & Tech",
-        tag: "Tri-Pillar Brand",
         description:
           "A sports group spanning three businesses: media and updates, brand and sponsorship consulting, and analytics. One profile, distinct content for all three company pages.",
-        highlight: "Balancing fast-paced sports media cadence with high-ticket consulting authority",
-        format: "Live Data Analysis & Sponsorship Breakdowns",
-        keyOutcome: "Sustained top-tier visibility in sports business leadership circles.",
       },
       {
         id: "grc-advisory",
-        category: "Governance & Compliance",
         title: "Governance, Risk & Compliance",
-        tag: "Dubai / DIFC / VARA",
         description:
           "A Dubai advisory working across cross-border regulation, ADGM, DIFC, and VARA. A sharp, technical content voice built for a senior audience where few post well.",
-        highlight: "Turning dense regulatory and legal frameworks into compelling executive reading",
-        format: "Regulatory Decoders & Cross-Border Advisory Posts",
-        keyOutcome: "High-value advisory retainers initiated directly through LinkedIn inbound messages.",
       },
       {
-        id: "astrology-vastu",
-        category: "High-End Practice",
+        id: "astrology-numerology",
         title: "Astrology, Numerology & Vastu",
-        tag: "500+ High-Profile Clients",
         description:
           "A practice that has guided 500+ people through career, relationship, and life decisions. Content and outreach built for the people seeking that clarity.",
-        highlight: "Elevated, dignified personal branding that removed skepticism and highlighted life impact",
-        format: "Clarity Lessons & Archetype Case Studies",
-        keyOutcome: "Booked out consulting calendar with high-ticket founder and executive clients.",
       },
     ],
   },
