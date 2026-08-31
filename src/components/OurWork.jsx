@@ -7,15 +7,15 @@ export const OurWork = ({ onOpenBooking }) => {
   const { ourWork } = websiteContent;
 
   return (
-    <section id="our-work" className="py-16 md:py-24 border-b border-charcoal-border/80 relative overflow-hidden">
+    <section id="our-work" className="py-16 md:py-24 bg-transparent border-b border-charcoal-border/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45 }}
           className="max-w-3xl mb-12 sm:mb-16 space-y-3"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-semibold uppercase tracking-wider">
@@ -41,11 +41,11 @@ export const OurWork = ({ onOpenBooking }) => {
           {ourWork.items.map((item, idx) => (
             <motion.div
               key={item.id || idx}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-30px" }}
-              transition={{ duration: 0.4, delay: (idx % 4) * 0.08, ease: "easeOut" }}
-              className="p-7 sm:p-8 bg-white border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 transition-all duration-200 shadow-card flex flex-col justify-between group"
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: (idx % 4) * 0.06, ease: "easeOut" }}
+              className="p-7 sm:p-8 bg-white/90 backdrop-blur-xs border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 transition-all duration-200 shadow-card flex flex-col justify-between group"
             >
               <div>
                 {/* Card Top Strip */}
@@ -81,11 +81,11 @@ export const OurWork = ({ onOpenBooking }) => {
 
         {/* Confidentiality Standard Banner */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="p-8 bg-cream-subtle/80 border border-charcoal-border text-center max-w-4xl mx-auto space-y-4 shadow-sm"
+          transition={{ duration: 0.45 }}
+          className="p-8 bg-white/75 backdrop-blur-xs border border-charcoal-border text-center max-w-4xl mx-auto space-y-4 shadow-sm"
         >
           <p className="font-display text-lg sm:text-xl text-charcoal font-medium italic">
             “{ourWork.closing}”

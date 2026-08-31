@@ -12,15 +12,15 @@ export const FAQ = ({ onOpenBooking }) => {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-24 border-b border-charcoal-border/80 relative overflow-hidden">
+    <section id="faq" className="py-16 md:py-24 bg-transparent border-b border-charcoal-border/80 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45 }}
           className="text-center max-w-2xl mx-auto mb-14 space-y-3"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-semibold uppercase tracking-wider">
@@ -43,12 +43,12 @@ export const FAQ = ({ onOpenBooking }) => {
                 key={index}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-20px" }}
-                transition={{ duration: 0.35, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.35, delay: index * 0.04 }}
                 className={`border transition-all duration-200 ${
                   isOpen
                     ? 'bg-white border-forest/60 shadow-brand'
-                    : 'bg-white/80 border-charcoal-border hover:border-forest/40 shadow-card'
+                    : 'bg-white/90 backdrop-blur-xs border-charcoal-border hover:border-forest/40 shadow-card'
                 }`}
               >
                 <button

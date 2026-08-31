@@ -1,40 +1,33 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useInView } from 'framer-motion';
 
 /**
- * Animated numerical counter that triggers when scrolled into view
- * Supports strings like "92,700+", "3M+", "#2", "$350M+", "200+"
+ * High-performance animated numerical counter.
+ * Mutates text node directly on requestAnimationFrame to avoid triggering React component re-renders.
  */
-export const CountUp = ({ value, duration = 1.8, className = "" }) => {
+export const CountUp = ({ value, duration = 1.6, className = "" }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-20px" });
-  const [displayValue, setDisplayValue] = useState(value);
+  const isInView = useInView(ref, { once: true, margin: "0px" });
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || !ref.current) return;
 
-    // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
-      setDisplayValue(value);
+      if (ref.current) ref.current.textContent = value;
       return;
     }
 
-    // Parse the value string
     const stringVal = String(value);
-    
-    // Extract prefix (e.g., "$", "#")
     const prefixMatch = stringVal.match(/^[^0-9.]+/);
     const prefix = prefixMatch ? prefixMatch[0] : "";
     
-    // Extract suffix (e.g., "+", "M+", "/mo", "K+")
     const suffixMatch = stringVal.match(/[^0-9.,]+$/);
     const suffix = suffixMatch ? suffixMatch[0] : "";
     
-    // Extract clean number string
     const numPartMatch = stringVal.match(/[0-9]+(?:,[0-9]+)*(?:\.[0-9]+)?/);
     if (!numPartMatch) {
-      setDisplayValue(value);
+      if (ref.current) ref.current.textContent = value;
       return;
     }
 
@@ -45,7 +38,7 @@ export const CountUp = ({ value, duration = 1.8, className = "" }) => {
     const decimalPlaces = hasDecimal ? numStr.split(".")[1].length : 0;
 
     if (isNaN(targetNum)) {
-      setDisplayValue(value);
+      if (ref.current) ref.current.textContent = value;
       return;
     }
 
@@ -72,12 +65,14 @@ export const CountUp = ({ value, duration = 1.8, className = "" }) => {
         formattedNum = parts.join(".");
       }
 
-      setDisplayValue(`${prefix}${formattedNum}${suffix}`);
+      if (ref.current) {
+        ref.current.textContent = `${prefix}${formattedNum}${suffix}`;
+      }
 
       if (progress < 1) {
         animationFrameId = requestAnimationFrame(animate);
       } else {
-        setDisplayValue(value);
+        if (ref.current) ref.current.textContent = value;
       }
     };
 
@@ -90,9 +85,10 @@ export const CountUp = ({ value, duration = 1.8, className = "" }) => {
 
   return (
     <span ref={ref} className={className}>
-      {displayValue}
+      {value}
     </span>
   );
 };
 
 export default CountUp;
+

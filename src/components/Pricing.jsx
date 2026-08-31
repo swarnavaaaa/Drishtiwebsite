@@ -16,15 +16,15 @@ export const Pricing = ({ onOpenBooking }) => {
   ];
 
   return (
-    <section id="pricing" className="py-16 md:py-24 bg-cream-subtle/70 border-b border-charcoal-border/80 relative overflow-hidden">
+    <section id="pricing" className="py-16 md:py-24 bg-transparent border-b border-charcoal-border/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45 }}
           className="max-w-3xl mb-14 space-y-3"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-semibold uppercase tracking-wider">
@@ -45,14 +45,14 @@ export const Pricing = ({ onOpenBooking }) => {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-30px" }}
-                transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }}
                 className={`p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 relative ${
                   isFeatured
                     ? 'bg-forest text-cream border-2 border-forest-dark shadow-2xl scale-[1.01] lg:scale-[1.03] z-10 hover:shadow-brand-hover'
-                    : 'bg-white text-charcoal border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 shadow-card'
+                    : 'bg-white/90 backdrop-blur-xs text-charcoal border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 shadow-card'
                 }`}
               >
                 {/* Popular Badge */}
@@ -128,11 +128,11 @@ export const Pricing = ({ onOpenBooking }) => {
 
         {/* All Inclusions Checklist Card */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="p-7 sm:p-8 bg-white border border-charcoal-border shadow-card hover:border-forest/40 transition-colors"
+          transition={{ duration: 0.45 }}
+          className="p-7 sm:p-8 bg-white/90 backdrop-blur-xs border border-charcoal-border shadow-card hover:border-forest/40 transition-colors"
         >
           <div className="max-w-3xl mb-6">
             <h4 className="font-display text-xl text-charcoal font-medium">

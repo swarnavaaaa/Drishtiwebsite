@@ -7,15 +7,15 @@ export const Services = ({ onOpenBooking }) => {
   const { services } = websiteContent;
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-cream-subtle/60 border-b border-charcoal-border/80 relative overflow-hidden">
+    <section id="services" className="py-16 md:py-24 bg-transparent border-b border-charcoal-border/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45 }}
           className="max-w-3xl mb-14 space-y-3"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-semibold uppercase tracking-wider">
@@ -39,11 +39,11 @@ export const Services = ({ onOpenBooking }) => {
           {services.pillars.map((pillar, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-30px" }}
-              transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }}
-              className="p-7 sm:p-8 bg-white border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 transition-all duration-200 shadow-card flex flex-col justify-between group"
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.06, ease: "easeOut" }}
+              className="p-7 sm:p-8 bg-white/90 backdrop-blur-xs border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 transition-all duration-200 shadow-card flex flex-col justify-between group"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between pb-4 border-b border-charcoal-border/50">
@@ -83,10 +83,10 @@ export const Services = ({ onOpenBooking }) => {
 
         {/* Our Approach (3 Core Beliefs Callout Block) */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
           className="bg-forest text-cream p-8 sm:p-12 border border-forest-dark relative overflow-hidden shadow-2xl"
         >
           <div className="max-w-3xl mb-8 space-y-2 relative z-10">
@@ -108,7 +108,7 @@ export const Services = ({ onOpenBooking }) => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                transition={{ duration: 0.35, delay: idx * 0.08 }}
                 className="space-y-2.5 p-5 bg-forest-surface border border-sage/20 hover:border-sage/50 transition-colors"
               >
                 <div className="font-mono text-xs font-bold text-mint">

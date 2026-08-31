@@ -15,9 +15,9 @@ export const WhoThisIsFor = () => {
           
           {/* Left Column: Heading & Context (5 Cols) */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="lg:col-span-5 space-y-5 lg:sticky lg:top-28"
           >
@@ -50,11 +50,11 @@ export const WhoThisIsFor = () => {
             {whoThisIsFor.points.map((point, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-30px" }}
-                transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }}
-                className="p-6 sm:p-7 bg-white border border-charcoal-border hover:border-forest/50 hover:shadow-brand hover:-translate-y-0.5 transition-all duration-200 shadow-card group"
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.06, ease: "easeOut" }}
+                className="p-6 sm:p-7 bg-white/90 backdrop-blur-xs border border-charcoal-border hover:border-forest/50 hover:shadow-brand hover:-translate-y-0.5 transition-all duration-200 shadow-card group"
               >
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 bg-mint/60 border border-sage/40 text-forest flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-forest group-hover:text-cream transition-colors duration-200">

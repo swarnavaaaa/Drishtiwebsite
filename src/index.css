@@ -86,12 +86,50 @@ html.lenis, html.lenis body {
   animation-play-state: paused;
 }
 
+/* GPU Floating Ambient Orbs Keyframes */
+@keyframes floatOrb1 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(60px, -50px, 0) scale(1.12); }
+  66% { transform: translate3d(-40px, 40px, 0) scale(0.95); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes floatOrb2 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(-60px, 50px, 0) scale(0.9); }
+  66% { transform: translate3d(50px, -40px, 0) scale(1.1); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes floatOrb3 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(50px, 60px, 0) scale(1.15); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+.animate-orb-1 {
+  animation: floatOrb1 20s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-orb-2 {
+  animation: floatOrb2 25s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-orb-3 {
+  animation: floatOrb3 22s ease-in-out infinite;
+  will-change: transform;
+}
+
 /* Accessibility: respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
-    animation: none;
-    width: auto;
-    flex-wrap: wrap;
+  .animate-marquee,
+  .animate-orb-1,
+  .animate-orb-2,
+  .animate-orb-3 {
+    animation: none !important;
+    transform: none !important;
   }
   * {
     animation-duration: 0.01ms !important;

@@ -7,7 +7,7 @@ export const BrandTrustStrip = () => {
   const marqueeBrands = [...brandLogosRow.brands, ...brandLogosRow.brands];
 
   return (
-    <section className="py-8 sm:py-10 bg-cream-subtle/80 border-b border-charcoal-border/70 overflow-hidden relative">
+    <section className="py-8 sm:py-10 bg-transparent border-b border-charcoal-border/70 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
         {/* Label */}
         <p className="text-center text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-charcoal-muted">
@@ -18,8 +18,8 @@ export const BrandTrustStrip = () => {
       {/* Marquee Wrapper with soft edge fade masks */}
       <div className="relative w-full overflow-hidden">
         {/* Left & Right gradient fade masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-cream-subtle to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-cream-subtle to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-cream/90 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-cream/90 to-transparent z-10 pointer-events-none" />
 
         {/* Continuous Animated Marquee Track */}
         <div className="animate-marquee py-2 flex items-center gap-3 sm:gap-4 select-none">

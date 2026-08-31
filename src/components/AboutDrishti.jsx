@@ -27,10 +27,10 @@ export const AboutDrishti = ({ onOpenBooking }) => {
           
           {/* Main Greeting & Bio */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45 }}
             className="space-y-6"
           >
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-charcoal font-normal tracking-tight leading-[1.15]">
@@ -51,11 +51,11 @@ export const AboutDrishti = ({ onOpenBooking }) => {
 
           {/* Credibility Summary Ribbon */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-30px" }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="p-6 sm:p-7 bg-white border border-charcoal-border shadow-card space-y-3.5 hover:border-forest/40 transition-colors"
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.08 }}
+            className="p-6 sm:p-7 bg-white/90 backdrop-blur-xs border border-charcoal-border shadow-card space-y-3.5 hover:border-forest/40 transition-colors"
           >
             <div className="text-xs font-bold uppercase tracking-wider text-forest font-mono">
               Verified Track Record
@@ -81,10 +81,10 @@ export const AboutDrishti = ({ onOpenBooking }) => {
 
           {/* Action Channels (All 3 Buttons with min 48px touch target) */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-30px" }}
-            transition={{ duration: 0.5, delay: 0.15 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.12 }}
             className="pt-2 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3.5"
           >
             {/* Primary Action: Book a Discovery Call */}
@@ -111,7 +111,7 @@ export const AboutDrishti = ({ onOpenBooking }) => {
             {/* Email Contact Button */}
             <a
               href={`mailto:${brand.email}`}
-              className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 bg-white hover:bg-cream-subtle text-charcoal text-xs font-semibold tracking-wide border border-charcoal-border hover:border-forest/40 hover:-translate-y-0.5 active:translate-y-0 transition-all shadow-2xs"
+              className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 bg-white/90 hover:bg-white text-charcoal text-xs font-semibold tracking-wide border border-charcoal-border hover:border-forest/40 hover:-translate-y-0.5 active:translate-y-0 transition-all shadow-2xs"
             >
               <Mail className="w-3.5 h-3.5 text-sage-dark" />
               <span>{brand.email}</span>
