@@ -39,16 +39,12 @@ export const FAQ = ({ onOpenBooking }) => {
           {faq.items.map((item, index) => {
             const isOpen = openIndex === index;
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: index * 0.04 }}
-                className={`border transition-all duration-200 ${
+                className={`border transition-colors duration-200 ${
                   isOpen
                     ? 'bg-white border-forest/60 shadow-brand'
-                    : 'bg-white/90 backdrop-blur-xs border-charcoal-border hover:border-forest/40 shadow-card'
+                    : 'bg-white/85 backdrop-blur-xs border-charcoal-border hover:border-forest/40 shadow-card'
                 }`}
               >
                 <button
@@ -85,7 +81,7 @@ export const FAQ = ({ onOpenBooking }) => {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.div>
+              </div>
             );
           })}
         </div>

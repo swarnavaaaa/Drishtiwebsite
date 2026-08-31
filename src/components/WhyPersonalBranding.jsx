@@ -31,14 +31,10 @@ export const WhyPersonalBranding = () => {
         {/* 6-Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {whyPersonalBranding.benefits.map((benefit, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
-              className={`p-7 sm:p-8 bg-white/90 backdrop-blur-xs border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between group shadow-card ${
-                index === 0 ? 'md:col-span-2 lg:col-span-1 bg-gradient-to-b from-mint-light/50 to-white/95 border-sage/50' : ''
+              className={`p-7 sm:p-8 bg-white/85 backdrop-blur-xs border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 transition-transform transition-shadow duration-200 flex flex-col justify-between group shadow-card ${
+                index === 0 ? 'md:col-span-2 lg:col-span-1 bg-gradient-to-b from-mint-light/60 to-white/90 border-sage/50' : ''
               }`}
             >
               <div>
@@ -64,7 +60,7 @@ export const WhyPersonalBranding = () => {
                   netwerked.io
                 </span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

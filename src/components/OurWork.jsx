@@ -39,13 +39,9 @@ export const OurWork = ({ onOpenBooking }) => {
         {/* 8 Confidential Engagements Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7 items-stretch mb-12">
           {ourWork.items.map((item, idx) => (
-            <motion.div
+            <div
               key={item.id || idx}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: (idx % 4) * 0.06, ease: "easeOut" }}
-              className="p-7 sm:p-8 bg-white/90 backdrop-blur-xs border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 transition-all duration-200 shadow-card flex flex-col justify-between group"
+              className="p-7 sm:p-8 bg-white/85 backdrop-blur-xs border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 transition-transform transition-shadow duration-200 shadow-card flex flex-col justify-between group"
             >
               <div>
                 {/* Card Top Strip */}
@@ -75,7 +71,7 @@ export const OurWork = ({ onOpenBooking }) => {
                 <span>Executive & Company Presence</span>
                 <span className="text-forest font-semibold opacity-0 group-hover:opacity-100 transition-opacity">netwerked.io</span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

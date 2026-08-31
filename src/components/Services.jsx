@@ -37,13 +37,9 @@ export const Services = ({ onOpenBooking }) => {
         {/* 4 Pillars Grid (Asymmetrical 2x2 with deep content) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-16">
           {services.pillars.map((pillar, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.06, ease: "easeOut" }}
-              className="p-7 sm:p-8 bg-white/90 backdrop-blur-xs border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 transition-all duration-200 shadow-card flex flex-col justify-between group"
+              className="p-7 sm:p-8 bg-white/85 backdrop-blur-xs border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 transition-transform transition-shadow duration-200 shadow-card flex flex-col justify-between group"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between pb-4 border-b border-charcoal-border/50">
@@ -77,7 +73,7 @@ export const Services = ({ onOpenBooking }) => {
                 <span className="text-xs font-mono text-charcoal-light">Included in all retainers</span>
                 <span className="text-xs font-mono text-forest opacity-0 group-hover:opacity-100 transition-opacity">netwerked.io</span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

@@ -43,16 +43,12 @@ export const Pricing = ({ onOpenBooking }) => {
           {pricing.tiers.map((tier, index) => {
             const isFeatured = tier.isPopular;
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }}
-                className={`p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 relative ${
+                className={`p-7 sm:p-8 flex flex-col justify-between transition-transform transition-shadow duration-200 relative ${
                   isFeatured
                     ? 'bg-forest text-cream border-2 border-forest-dark shadow-2xl scale-[1.01] lg:scale-[1.03] z-10 hover:shadow-brand-hover'
-                    : 'bg-white/90 backdrop-blur-xs text-charcoal border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 shadow-card'
+                    : 'bg-white/85 backdrop-blur-xs text-charcoal border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 shadow-card'
                 }`}
               >
                 {/* Popular Badge */}
@@ -121,7 +117,7 @@ export const Pricing = ({ onOpenBooking }) => {
                     Investment shared on discovery call
                   </p>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
