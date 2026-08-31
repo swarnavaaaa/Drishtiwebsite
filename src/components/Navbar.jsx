@@ -9,52 +9,49 @@ export const Navbar = ({ onOpenBooking }) => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
-  // Track scroll position for navbar styling & active section scrollspy
+  // High performance IntersectionObserver for active section tracking
   useEffect(() => {
     const sectionIds = websiteContent.navigation.map((item) => item.href.replace('#', ''));
-
+    
+    // Scrolled state using passive throttled scroll listener
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-
-      // Scrollspy calculation
-      const scrollPosition = window.scrollY + 120;
-      let currentActive = '';
-
-      for (const id of sectionIds) {
-        const el = document.getElementById(id);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            currentActive = `#${id}`;
-            break;
-          }
-        }
-      }
-
-      if (currentActive) {
-        setActiveSection(currentActive);
-      } else if (window.scrollY < 200) {
-        setActiveSection('');
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    setScrolled(window.scrollY > 20);
 
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
+    // IntersectionObserver without reading layout or offsets
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(`#${entry.target.id}`);
+        }
+      });
     };
-  }, [mobileMenuOpen]);
+
+    const observer = new IntersectionObserver(observerCallback, {
+      rootMargin: '-30% 0px -60% 0px',
+      threshold: 0,
+    });
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <>
