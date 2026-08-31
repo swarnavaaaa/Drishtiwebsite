@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ArrowDownRight, TrendingUp, Sparkles, Heart, MessageCircle, Repeat2, Send } from 'lucide-react';
+import { ArrowRight, ArrowDownRight } from 'lucide-react';
 import { websiteContent } from '../data/websiteContent';
 
 export const Hero = ({ onOpenBooking }) => {
@@ -67,71 +67,87 @@ export const Hero = ({ onOpenBooking }) => {
 
           </div>
 
-          {/* Right Column: Ghostwriting Live Post Card (5 Cols) */}
+          {/* Right Column: Editorial Portrait Placeholder (5 Cols) */}
           <div className="lg:col-span-5 relative">
             
-            {/* Decorative background accent block */}
+            {/* Decorative architectural background accent block */}
             <div className="absolute -top-3 -right-3 w-full h-full bg-mint/50 border border-sage/30 pointer-events-none" />
 
-            {/* Authentic LinkedIn Post Card (Custom Styled, Not Generic) */}
-            <div className="relative bg-white border-2 border-forest/15 p-6 sm:p-7 shadow-xl space-y-4">
+            {/* Editorial Portrait Frame */}
+            <div className="relative bg-white border-2 border-forest/20 shadow-2xl overflow-hidden group">
               
-              {/* Header: Author & Credentials */}
-              <div className="flex items-start justify-between gap-3 pb-3 border-b border-charcoal-border/50">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-forest text-cream font-display font-medium text-lg flex items-center justify-center flex-shrink-0 border border-forest-dark">
-                    DB
+              {/* Portrait Container */}
+              <div className="aspect-[4/5] w-full bg-gradient-to-br from-cream-subtle via-mint-light/40 to-sage-tint relative flex flex-col justify-between p-6 sm:p-8 overflow-hidden">
+                
+                {/* Background ambient watermarks */}
+                <div className="absolute -right-8 -top-8 w-40 h-40 opacity-15 pointer-events-none">
+                  <img
+                    src="/brand/04_symbol_only_transparent.png"
+                    alt=""
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+
+                {/* Top Header Tag */}
+                <div className="relative z-10 flex items-center justify-between">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/90 backdrop-blur-xs border border-charcoal-border/70 text-[11px] font-mono font-bold uppercase tracking-wider text-forest shadow-xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-forest" />
+                    <span>Founder & Ghostwriter</span>
                   </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <h4 className="font-sans font-bold text-sm text-charcoal">
-                        {hero.samplePost.author}
-                      </h4>
-                      <span className="inline-block px-1.5 py-0.5 bg-mint/60 text-[10px] font-semibold text-forest uppercase">
-                        Ghostwriter
-                      </span>
+
+                  <span className="font-mono text-[11px] text-charcoal-light uppercase tracking-widest bg-white/80 px-2 py-0.5 border border-charcoal-border/40">
+                    Est. 2023
+                  </span>
+                </div>
+
+                {/* Center: Editorial Portrait Placeholder Art / Silhouette */}
+                <div className="my-auto py-8 text-center relative z-10 flex flex-col items-center justify-center space-y-4">
+                  {/* Portrait Placeholder Avatar Frame */}
+                  <div className="relative">
+                    <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-none bg-forest text-cream font-display text-4xl sm:text-5xl font-medium flex items-center justify-center border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-300">
+                      DB
                     </div>
-                    <p className="text-xs text-charcoal-muted line-clamp-1">
-                      {hero.samplePost.role}
+                    {/* Verified badge */}
+                    <div className="absolute -bottom-2 -right-2 bg-mint border-2 border-forest text-forest px-2 py-0.5 text-[10px] font-mono font-bold uppercase">
+                      Verified
+                    </div>
+                  </div>
+
+                  <div className="space-y-1">
+                    <h3 className="font-display text-2xl text-charcoal font-semibold tracking-tight">
+                      Drishti Bagla
+                    </h3>
+                    <p className="text-xs font-mono uppercase tracking-wider text-forest font-bold">
+                      Founder, netwerked.io
                     </p>
-                    <p className="text-[11px] text-charcoal-light font-mono mt-0.5">
-                      36 months · 3M+ monthly impressions
+                    <p className="text-xs text-charcoal-muted max-w-[220px] mx-auto">
+                      Ex-Deloitte & KPMG Risk Consultant
                     </p>
                   </div>
                 </div>
-              </div>
 
-              {/* Post Content Excerpt */}
-              <div className="text-xs sm:text-sm text-charcoal leading-relaxed whitespace-pre-line font-normal py-1">
-                {hero.samplePost.content}
-              </div>
-
-              {/* Engagement Metrics Proof Bar */}
-              <div className="pt-3 border-t border-charcoal-border/60 flex items-center justify-between text-xs text-charcoal-muted">
-                <div className="flex items-center gap-1.5 text-forest font-semibold">
-                  <TrendingUp className="w-3.5 h-3.5" />
-                  <span>{hero.samplePost.metrics.impressions} Views</span>
+                {/* Bottom Floating Stats Strip */}
+                <div className="relative z-10 bg-white/95 backdrop-blur-sm border border-charcoal-border/80 p-3.5 shadow-sm space-y-2">
+                  <div className="flex items-center justify-between text-[11px] font-mono">
+                    <span className="text-charcoal-muted uppercase tracking-wider">Reach</span>
+                    <span className="font-bold text-forest">3M+ Impressions / mo</span>
+                  </div>
+                  <div className="w-full bg-cream-dark h-1">
+                    <div className="bg-forest h-1 w-[92%]" />
+                  </div>
+                  <div className="flex items-center justify-between text-[10px] text-charcoal-light">
+                    <span>92,700+ Community</span>
+                    <span>#2 Favikon Sports</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-4 text-[11px] text-charcoal-muted">
-                  <span className="flex items-center gap-1">
-                    <Heart className="w-3 h-3 text-sage-dark fill-sage-dark/20" />
-                    {hero.samplePost.metrics.likes}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <MessageCircle className="w-3 h-3 text-sage-dark" />
-                    {hero.samplePost.metrics.comments}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Repeat2 className="w-3 h-3 text-sage-dark" />
-                    {hero.samplePost.metrics.reposts}
-                  </span>
-                </div>
+
               </div>
 
-              {/* Quality Note Badge */}
-              <div className="p-2.5 bg-mint-light/70 border border-sage/40 flex items-center gap-2 text-[11px] text-forest">
-                <Sparkles className="w-3.5 h-3.5 flex-shrink-0 text-sage-dark" />
-                <span className="italic">Written for resonance first. Zero template filler.</span>
+              {/* Photo prompt note */}
+              <div className="p-2.5 bg-forest text-cream text-[11px] font-mono text-center flex items-center justify-center gap-2">
+                <span>✦</span>
+                <span>Portrait Image Placeholder</span>
+                <span>✦</span>
               </div>
 
             </div>
