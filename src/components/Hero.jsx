@@ -114,7 +114,7 @@ export const Hero = ({ onOpenBooking }) => {
             transition={{ duration: 0.6, delay: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
             className="lg:col-span-5 relative flex justify-center lg:justify-end"
           >
-            <div className="relative w-full max-w-[340px] sm:max-w-[360px]">
+            <div className="relative w-full max-w-[360px] sm:max-w-[400px]">
               
               {/* Decorative architectural background accent block */}
               <div className="absolute -top-2.5 -right-2.5 w-full h-full bg-mint/50 border border-sage/30 pointer-events-none transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1" />
@@ -153,10 +153,10 @@ export const Hero = ({ onOpenBooking }) => {
                       <img
                         src="/me.jpg"
                         alt="Drishti Bagla"
-                        className="w-24 h-24 sm:w-28 sm:h-28 object-cover border-3 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
+                        className="w-48 h-48 sm:w-56 sm:h-56 object-cover border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-300"
                       />
                       {/* Verified badge */}
-                      <div className="absolute -bottom-1.5 -right-1.5 bg-mint border border-forest text-forest px-1.5 py-0.2 text-[9px] font-mono font-bold uppercase shadow-2xs">
+                      <div className="absolute -bottom-2 -right-2 bg-mint border border-forest text-forest px-2 py-0.5 text-[10px] font-mono font-bold uppercase shadow-2xs">
                         Verified
                       </div>
                     </div>
