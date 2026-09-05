@@ -148,11 +148,13 @@ export const Hero = ({ onOpenBooking }) => {
 
                   {/* Center: Editorial Portrait Placeholder Art / Silhouette */}
                   <div className="my-auto py-4 text-center relative z-10 flex flex-col items-center justify-center space-y-3">
-                    {/* Portrait Placeholder Avatar Frame */}
+                    {/* Portrait Avatar Frame */}
                     <div className="relative">
-                      <div className="w-24 h-24 sm:w-28 sm:h-28 bg-forest text-cream font-display text-3xl sm:text-4xl font-medium flex items-center justify-center border-3 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
-                        DB
-                      </div>
+                      <img
+                        src="/me.jpg"
+                        alt="Drishti Bagla"
+                        className="w-24 h-24 sm:w-28 sm:h-28 object-cover border-3 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
+                      />
                       {/* Verified badge */}
                       <div className="absolute -bottom-1.5 -right-1.5 bg-mint border border-forest text-forest px-1.5 py-0.2 text-[9px] font-mono font-bold uppercase shadow-2xs">
                         Verified
@@ -172,26 +174,7 @@ export const Hero = ({ onOpenBooking }) => {
                     </div>
                   </div>
 
-                  {/* Bottom Floating Stats Strip */}
-                  <div className="relative z-10 bg-white/95 backdrop-blur-sm border border-charcoal-border/80 p-3 shadow-xs space-y-1.5">
-                    <div className="flex items-center justify-between text-[10px] font-mono">
-                      <span className="text-charcoal-muted uppercase tracking-wider">Reach</span>
-                      <span className="font-bold text-forest">3M+ Impressions / mo</span>
-                    </div>
-                    <div className="w-full bg-cream-dark h-1 overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: "92%" }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1.2, delay: 0.3 }}
-                        className="bg-forest h-1"
-                      />
-                    </div>
-                    <div className="flex items-center justify-between text-[9px] text-charcoal-light font-mono">
-                      <span>92,700+ Community</span>
-                      <span>#2 Favikon Sports</span>
-                    </div>
-                  </div>
+
 
                 </div>
 
