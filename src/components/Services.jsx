@@ -124,13 +124,15 @@ export const Services = ({ onOpenBooking }) => {
             <p className="text-xs text-mint font-medium">
               Ready to replace generic content with authentic executive presence?
             </p>
-            <button
-              onClick={onOpenBooking}
+            <a
+              href={websiteContent.brand.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 min-h-[44px] px-5 py-2.5 bg-mint text-forest hover:bg-cream active:scale-[0.98] text-xs font-bold uppercase tracking-wider transition-all shadow-brand cursor-pointer"
             >
               <span>Book a Discovery Call</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+            </a>
           </div>
         </motion.div>
 

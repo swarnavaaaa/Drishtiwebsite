@@ -59,13 +59,15 @@ export const FinalCTA = ({ onOpenBooking }) => {
           transition={{ duration: 0.45, delay: 0.15 }}
           className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3"
         >
-          <button
-            onClick={onOpenBooking}
+          <a
+            href={brand.calendlyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 min-h-[44px] px-7 py-3 bg-mint text-forest text-xs font-bold uppercase tracking-wider hover:bg-cream hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer shadow-brand"
           >
             <span>{finalCta.buttonText}</span>
             <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+          </a>
 
           <button
             onClick={handleCopyEmail}

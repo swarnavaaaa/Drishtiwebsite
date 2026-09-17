@@ -13,12 +13,10 @@ import { Pricing } from './components/Pricing';
 import { FAQ } from './components/FAQ';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
-import { BookingModal } from './components/BookingModal';
 import { AmbientBackground } from './components/AmbientBackground';
+import { websiteContent } from './data/websiteContent';
 
 export function App() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
-
   // Initialize luxury smooth inertia scroll (Lenis)
   useEffect(() => {
     // Respect reduced motion
@@ -47,8 +45,9 @@ export function App() {
     };
   }, []);
 
-  const handleOpenBooking = () => setIsBookingOpen(true);
-  const handleCloseBooking = () => setIsBookingOpen(false);
+  const handleOpenBooking = () => {
+    window.open(websiteContent.brand.calendlyUrl, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="min-h-screen relative text-charcoal flex flex-col font-sans selection:bg-mint selection:text-forest overflow-x-hidden">
@@ -96,9 +95,6 @@ export function App() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Interactive Booking Modal */}
-      <BookingModal isOpen={isBookingOpen} onClose={handleCloseBooking} />
     </div>
   );
 }

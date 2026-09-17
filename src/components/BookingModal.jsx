@@ -62,7 +62,7 @@ export const BookingModal = ({ isOpen, onClose }) => {
             <X className="w-5 h-5" />
           </button>
 
-          <div className="mb-6">
+          <div className="mb-5">
             <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-semibold uppercase tracking-wider mb-3">
               Discovery Call
             </div>
@@ -72,6 +72,23 @@ export const BookingModal = ({ isOpen, onClose }) => {
             <p className="text-sm text-charcoal-muted mt-2">
               A 20-minute conversation about your goals, current profile, and whether netwerked is the right growth partner for you.
             </p>
+
+            <a
+              href={websiteContent.brand.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-forest text-cream text-xs font-bold uppercase tracking-wider hover:bg-forest-light transition-all shadow-brand border border-forest-dark"
+            >
+              <Calendar className="w-4 h-4 text-mint" />
+              <span>Schedule Instantly on Calendly</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+
+            <div className="relative flex py-3 items-center">
+              <div className="flex-grow border-t border-charcoal-border/60"></div>
+              <span className="flex-shrink mx-3 text-[11px] font-mono text-charcoal-light uppercase tracking-wider">or send a quick note</span>
+              <div className="flex-grow border-t border-charcoal-border/60"></div>
+            </div>
           </div>
 
           {formSubmitted ? (

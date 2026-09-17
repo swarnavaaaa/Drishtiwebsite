@@ -90,12 +90,14 @@ export const FAQ = ({ onOpenBooking }) => {
         <div className="mt-12 text-center">
           <p className="text-xs sm:text-sm text-charcoal-muted">
             Have a specific scenario not covered above?{' '}
-            <button
-              onClick={onOpenBooking}
+            <a
+              href={websiteContent.brand.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-forest font-bold underline underline-offset-4 hover:text-forest-dark cursor-pointer"
             >
               Ask Drishti directly on a discovery call
-            </button>
+            </a>
           </p>
         </div>
 

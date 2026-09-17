@@ -71,13 +71,15 @@ export const Hero = ({ onOpenBooking }) => {
               variants={itemVariants}
               className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4"
             >
-              <button
-                onClick={onOpenBooking}
+              <a
+                href={websiteContent.brand.calendlyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 min-h-[48px] px-7 py-3.5 bg-forest text-cream text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-forest-light transition-all shadow-brand hover:shadow-brand-hover hover:-translate-y-0.5 active:translate-y-0 border border-forest-dark cursor-pointer"
               >
                 <span>{hero.primaryCta}</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
 
               <a
                 href="#our-work"

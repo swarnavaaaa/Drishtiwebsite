@@ -98,8 +98,10 @@ export const Pricing = ({ onOpenBooking }) => {
 
                 {/* Card Bottom CTA (Min 48px tap target) */}
                 <div className="pt-8 mt-8 border-t border-current/15">
-                  <button
-                    onClick={onOpenBooking}
+                  <a
+                    href={websiteContent.brand.calendlyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-full inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-brand ${
                       isFeatured
                         ? 'bg-mint text-forest hover:bg-cream active:scale-[0.99]'
@@ -108,7 +110,7 @@ export const Pricing = ({ onOpenBooking }) => {
                   >
                     <span>{pricing.cta}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  </a>
                   <p
                     className={`text-center text-[11px] mt-2.5 font-mono ${
                       isFeatured ? 'text-mint/70' : 'text-charcoal-light'

@@ -107,13 +107,15 @@ export const Navbar = ({ onOpenBooking }) => {
 
             {/* Right Action Button (Desktop) */}
             <div className="hidden md:flex items-center gap-4">
-              <button
-                onClick={onOpenBooking}
+              <a
+                href={websiteContent.brand.calendlyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 min-h-[44px] bg-forest text-cream text-xs font-bold uppercase tracking-wider hover:bg-forest-light hover:shadow-brand active:scale-[0.98] transition-all border border-forest-dark"
               >
                 <span>Book a Call</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
-              </button>
+              </a>
             </div>
 
             {/* Mobile Menu Toggle Button (Min 44px tap target) */}
@@ -187,16 +189,16 @@ export const Navbar = ({ onOpenBooking }) => {
 
               {/* Action Button inside mobile menu */}
               <div className="pt-2">
-                <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    onOpenBooking();
-                  }}
+                <a
+                  href={websiteContent.brand.calendlyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="w-full inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 bg-forest text-cream text-xs font-bold uppercase tracking-wider hover:bg-forest-light active:scale-[0.99] transition-all shadow-brand"
                 >
                   <span>Book a Discovery Call</span>
                   <ArrowUpRight className="w-4 h-4" />
-                </button>
+                </a>
               </div>
             </motion.div>
           </div>

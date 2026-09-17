@@ -88,13 +88,15 @@ export const AboutDrishti = ({ onOpenBooking }) => {
             className="pt-2 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3.5"
           >
             {/* Primary Action: Book a Discovery Call */}
-            <button
-              onClick={onOpenBooking}
+            <a
+              href={brand.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3.5 bg-forest text-cream text-xs font-bold uppercase tracking-wider hover:bg-forest-light hover:shadow-brand hover:-translate-y-0.5 active:translate-y-0 transition-all border border-forest-dark cursor-pointer"
             >
               <span>Book a Discovery Call</span>
               <ArrowUpRight className="w-4 h-4" />
-            </button>
+            </a>
 
             {/* LinkedIn Profile Button */}
             <a

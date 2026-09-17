@@ -87,13 +87,15 @@ export const OurWork = ({ onOpenBooking }) => {
             “{ourWork.closing}”
           </p>
           <div className="pt-2">
-            <button
-              onClick={onOpenBooking}
+            <a
+              href={websiteContent.brand.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3 bg-forest text-cream text-xs font-bold uppercase tracking-wider hover:bg-forest-light hover:shadow-brand hover:-translate-y-0.5 active:translate-y-0 transition-all border border-forest-dark cursor-pointer"
             >
               <span>Book a Discovery Call</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+            </a>
           </div>
         </motion.div>
 

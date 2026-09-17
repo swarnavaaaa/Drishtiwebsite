@@ -6,6 +6,8 @@ export const websiteContent = {
     founder: "Drishti Bagla",
     email: "drishti@netwerked.io",
     linkedinUrl: "https://linkedin.com/in/drishtibagla009",
+    calendlyUrl: "https://calendly.com/drishtibagla09/discovery-call",
+    bookingUrl: "https://calendly.com/drishtibagla09/discovery-call",
     domain: "netwerked.io",
   },
 
