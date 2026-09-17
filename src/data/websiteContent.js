@@ -21,16 +21,18 @@ export const websiteContent = {
   ],
 
   hero: {
-    eyebrow: "LinkedIn Personal Branding for Founders & Leaders",
+    eyebrow: "LINKEDIN PERSONAL BRANDING FOR FOUNDERS & CXOs",
     title: "Your best work deserves an audience.",
     description:
-      "Netwerked turns the founders behind great companies into the names their industry actually knows. It is the exact playbook that took one founder's LinkedIn from 5,000 to 92,700+ followers, grown entirely on its own, with zero ad spend.",
+      "Netwerked turns your expertise into the reputation your industry recognizes. Every post builds recall, so your name is the first that comes to mind. Clients, investors, talent, and press start reaching out on their own.",
+    descriptionSecondary:
+      "Built on the exact playbook that took the founder's LinkedIn from 5,000 to 95,000+ followers organically.",
     primaryCta: "Book a Discovery Call",
     secondaryCta: "See Our Work",
     stats: [
-      { value: "5K → 92.7K+", label: "Organic Growth" },
-      { value: "0", label: "Ad Spend" },
-      { value: "3M+", label: "Monthly Impressions" },
+      { value: "5K → 95K+", label: "ORGANIC GROWTH" },
+      { value: "3M+", label: "IMPRESSIONS EVERY MONTH" },
+      { value: "300+", label: "BRAND COLLABORATIONS" },
     ],
     samplePost: {
       author: "Drishti Bagla",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ArrowDownRight } from 'lucide-react';
+import { ArrowRight, ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { websiteContent } from '../data/websiteContent';
 import { CountUp } from './CountUp';
@@ -59,12 +59,15 @@ export const Hero = ({ onOpenBooking }) => {
             </motion.h1>
 
             {/* Sharp Positioning Copy */}
-            <motion.p
+            <motion.div
               variants={itemVariants}
-              className="text-base sm:text-lg text-charcoal/85 leading-relaxed max-w-2xl font-normal"
+              className="space-y-3 text-base sm:text-lg text-charcoal/85 leading-relaxed max-w-2xl font-normal"
             >
-              {hero.description}
-            </motion.p>
+              <p>{hero.description}</p>
+              {hero.descriptionSecondary && (
+                <p>{hero.descriptionSecondary}</p>
+              )}
+            </motion.div>
 
             {/* Actions Row (Min 48px tap targets) */}
             <motion.div
@@ -86,7 +89,7 @@ export const Hero = ({ onOpenBooking }) => {
                 className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3.5 bg-white/80 hover:bg-white text-charcoal text-xs sm:text-sm font-semibold tracking-wide border border-charcoal-border hover:border-forest/40 hover:-translate-y-0.5 active:translate-y-0 transition-all shadow-xs"
               >
                 <span>{hero.secondaryCta}</span>
-                <ArrowDownRight className="w-4 h-4 text-sage-dark" />
+                <ArrowDown className="w-4 h-4 text-sage-dark" />
               </a>
             </motion.div>
 
@@ -137,15 +140,11 @@ export const Hero = ({ onOpenBooking }) => {
                   </div>
 
                   {/* Top Header Tag */}
-                  <div className="relative z-10 flex items-center justify-between">
+                  <div className="relative z-10 flex items-center justify-start">
                     <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/90 backdrop-blur-xs border border-charcoal-border/70 text-[10px] font-mono font-bold uppercase tracking-wider text-forest shadow-2xs">
                       <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                      <span>Founder & Ghostwriter</span>
+                      <span>Founder and Growth Strategist</span>
                     </div>
-
-                    <span className="font-mono text-[10px] text-charcoal-light uppercase tracking-widest bg-white/80 px-2 py-0.5 border border-charcoal-border/40">
-                      Est. 2023
-                    </span>
                   </div>
 
                   {/* Center: Editorial Portrait Placeholder Art / Silhouette */}
@@ -159,7 +158,7 @@ export const Hero = ({ onOpenBooking }) => {
                       />
                       {/* Verified badge */}
                       <div className="absolute -bottom-2 -right-2 bg-mint border border-forest text-forest px-2 py-0.5 text-[10px] font-mono font-bold uppercase shadow-2xs">
-                        Verified
+                        VERIFIED
                       </div>
                     </div>
 
@@ -167,8 +166,8 @@ export const Hero = ({ onOpenBooking }) => {
                       <h3 className="font-display text-xl sm:text-2xl text-charcoal font-semibold tracking-tight">
                         Drishti Bagla
                       </h3>
-                      <p className="text-[11px] font-mono uppercase tracking-wider text-forest font-bold">
-                        Founder, netwerked.io
+                      <p className="text-[11px] font-mono tracking-wider text-forest font-bold">
+                        FOUNDER, Netwerked
                       </p>
                       <p className="text-xs text-charcoal-muted max-w-[200px] mx-auto">
                         Ex-Deloitte & KPMG Risk Consultant

@@ -19,13 +19,24 @@ export const CountUp = ({ value, duration = 1.6, className = "" }) => {
     }
 
     const stringVal = String(value);
-    const prefixMatch = stringVal.match(/^[^0-9.]+/);
+
+    // If stringVal contains an arrow like "5K → 95K+", animate the part after the arrow
+    let staticLead = "";
+    let parseTarget = stringVal;
+
+    if (stringVal.includes("→")) {
+      const arrowIndex = stringVal.indexOf("→");
+      staticLead = stringVal.slice(0, arrowIndex + 1) + " ";
+      parseTarget = stringVal.slice(arrowIndex + 1).trim();
+    }
+
+    const prefixMatch = parseTarget.match(/^[^0-9.]+/);
     const prefix = prefixMatch ? prefixMatch[0] : "";
     
-    const suffixMatch = stringVal.match(/[^0-9.,]+$/);
+    const suffixMatch = parseTarget.match(/[^0-9.,]+$/);
     const suffix = suffixMatch ? suffixMatch[0] : "";
     
-    const numPartMatch = stringVal.match(/[0-9]+(?:,[0-9]+)*(?:\.[0-9]+)?/);
+    const numPartMatch = parseTarget.match(/[0-9]+(?:,[0-9]+)*(?:\.[0-9]+)?/);
     if (!numPartMatch) {
       if (ref.current) ref.current.textContent = value;
       return;
@@ -66,7 +77,7 @@ export const CountUp = ({ value, duration = 1.6, className = "" }) => {
       }
 
       if (ref.current) {
-        ref.current.textContent = `${prefix}${formattedNum}${suffix}`;
+        ref.current.textContent = `${staticLead}${prefix}${formattedNum}${suffix}`;
       }
 
       if (progress < 1) {
