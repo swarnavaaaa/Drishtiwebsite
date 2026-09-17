@@ -78,11 +78,11 @@ Resonance first. Reach follows.`,
       },
       {
         title: "You want organic inbound interest",
-        description: "Clients, investors, talent, and press reaching out to you, without cold-pitching for every conversation.",
+        description: "The right people reach out to you first, so every conversation starts warm.",
       },
       {
         title: "You have a sharp point of view",
-        description: "Writing it up every week with the right register and cadence is the hard part.",
+        description: "Writing it up every week with the right tone and rhythm is the hard part.",
       },
       {
         title: "You have tried templates, AI tools, or generic agencies",

@@ -46,21 +46,21 @@ export const WhoThisIsFor = () => {
           </motion.div>
 
           {/* Right Column: 4 Distinct Pain Points (7 Cols) */}
-          <div className="lg:col-span-7 space-y-4">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-5">
             {whoThisIsFor.points.map((point, index) => (
               <div
                 key={index}
                 className="p-6 sm:p-7 bg-white/85 backdrop-blur-xs border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-0.5 transition-transform transition-shadow duration-200 shadow-card group"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-mint/60 border border-sage/40 text-forest flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-forest group-hover:text-cream transition-colors duration-200">
-                    <span className="font-mono text-xs font-bold">0{index + 1}</span>
+                <div className="flex items-start gap-4 sm:gap-5">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-mint/60 border border-sage/40 text-forest flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-forest group-hover:text-cream transition-colors duration-200">
+                    <span className="font-mono text-base sm:text-lg font-bold">0{index + 1}</span>
                   </div>
-                  <div className="space-y-1.5">
-                    <h3 className="font-sans font-bold text-base sm:text-lg text-charcoal tracking-tight group-hover:text-forest transition-colors duration-200">
+                  <div className="space-y-2">
+                    <h3 className="font-sans font-bold text-lg sm:text-xl text-charcoal tracking-tight group-hover:text-forest transition-colors duration-200">
                       {point.title}
                     </h3>
-                    <p className="text-sm text-charcoal/80 leading-relaxed font-normal">
+                    <p className="text-sm sm:text-base text-charcoal/85 leading-relaxed font-normal">
                       {point.description}
                     </p>
                   </div>
