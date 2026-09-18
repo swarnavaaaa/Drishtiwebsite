@@ -161,59 +161,85 @@ Resonance first. Reach follows.`,
   },
 
   ourWork: {
-    heading: "Our Work",
-    eyebrow: "Every engagement below is described by industry only, kept fully confidential.",
+    heading: "SELECTED WORK",
+    eyebrow: "Every engagement below is described by industry only and kept fully confidential.",
     title: "Different industries. Different voices. One hand.",
-    subtitle: "Every engagement below is confidential. The range speaks for itself.",
-    closing: "Every engagement stays confidential. That is the standard, for every client, every time.",
+    subtitle: "Every engagement below is described by industry only and kept fully confidential.",
+    quote: "“Your brand is what other people say about you when you're not in the room.”",
+    quoteAuthor: "Jeff Bezos",
+    ctaText: "BOOK A DISCOVERY CALL",
     items: [
       {
-        id: "sports-industry",
-        title: "Sports Industry: Personal Profile and Company Pages",
+        id: "sports-media-consulting-tech",
+        number: "01",
+        title: "Sports Media, Consulting & Technology",
+        confidential: true,
         description:
-          "A personal profile plus three company pages, all managed together. One consistent voice carried across an individual and his brands, all pointed the same direction.",
+          "Three company pages built from scratch, each covering a distinct business vertical, run alongside a personal profile in one consistent voice. All four accounts grew steadily, each vertical reading clearly on its own.",
+        tag: "1 PROFILE + 3 COMPANY PAGES",
       },
       {
-        id: "financial-modeling",
-        title: "Financial Modeling",
+        id: "financial-modeling-fpa",
+        number: "02",
+        title: "Financial Modeling & FP&A",
+        confidential: true,
         description:
-          "Models that have backed over $350 million in equity and debt raises across SaaS, renewables, and infrastructure. Content and outreach built to reach founders, CFOs, and investment teams directly.",
+          "Content and targeted outreach running together for over a year, the longest-standing engagement on this list. Outreach kept meetings coming in every month, with a following that built the whole way through.",
+        tag: "CONTENT + OUTREACH, 1 YEAR+",
       },
       {
-        id: "cross-industry",
-        title: "Cross-Industry Voice Work",
-        description:
-          "A distinct voice, written fresh for its own audience, with its own register and rhythm. Proof that the writing adapts and stays precise wherever it goes.",
-      },
-      {
-        id: "artificial-intelligence",
-        title: "Artificial Intelligence",
-        description:
-          "A venture building a new kind of AI centered on human wisdom and presence. Founder profile and company page run in step, building a category still being defined.",
-      },
-      {
-        id: "staff-augmentation",
-        title: "AI and Staff Augmentation",
-        description:
-          "A seed-backed engineering company serving clients across the US, UK, Dubai, and India. Presence built around one story: a bootstrapped side hustle that became a funded company.",
-      },
-      {
-        id: "sports-media",
-        title: "Sports Media, Consulting & Tech",
-        description:
-          "A sports group spanning three businesses: media and updates, brand and sponsorship consulting, and analytics. One profile, distinct content for all three company pages.",
-      },
-      {
-        id: "grc-advisory",
-        title: "Governance, Risk & Compliance",
-        description:
-          "A Dubai advisory working across cross-border regulation, ADGM, DIFC, and VARA. A sharp, technical content voice built for a senior audience where few post well.",
-      },
-      {
-        id: "astrology-numerology",
+        id: "astrology-numerology-vastu",
+        number: "03",
         title: "Astrology, Numerology & Vastu",
+        confidential: true,
         description:
-          "A practice that has guided 500+ people through career, relationship, and life decisions. Content and outreach built for the people seeking that clarity.",
+          "A practice that has guided 500+ people through career, relationship, and life decisions. Targeted outreach brought in a steady stream of consultations, alongside a following that grew consistently from onboarding.",
+        tag: "500+ GUIDED",
+      },
+      {
+        id: "ai-product-venture",
+        number: "04",
+        title: "AI Product Venture",
+        confidential: true,
+        description:
+          "A venture building a new kind of AI centered on human wisdom and presence. Content across the founder profile and company page built real traction, growing the following while the category was still being defined.",
+        tag: "PROFILE + COMPANY PAGE",
+      },
+      {
+        id: "ai-staff-augmentation",
+        number: "05",
+        title: "AI & Staff Augmentation",
+        confidential: true,
+        description:
+          "A seed-backed engineering company serving clients across the US, UK, Dubai, and India. Presence built around one story: a bootstrapped side hustle that became a funded company, with a following that grew steadily post-launch.",
+        tag: "FOUNDER STORY",
+      },
+      {
+        id: "outdoor-ambient-media",
+        number: "06",
+        title: "Outdoor & Ambient Media",
+        confidential: true,
+        description:
+          "A national ambient media network, content spanning founder and company page alike. One post on an early hire reached well beyond LinkedIn, picked up by national press, driving a real spike in followers and inbound interest.",
+        tag: "NATIONAL PRESS PICKUP",
+      },
+      {
+        id: "governance-risk-compliance",
+        number: "07",
+        title: "Governance, Risk & Compliance",
+        confidential: true,
+        description:
+          "A Dubai advisory working across cross-border regulation, ADGM, DIFC, and VARA. A technical voice for a senior audience, paired with personal posts on his own move to Dubai, so the audience connects with the person behind the expertise.",
+        tag: "EXECUTIVE VOICE",
+      },
+      {
+        id: "interior-design-manufacturing",
+        number: "08",
+        title: "Interior Design & Manufacturing",
+        confidential: true,
+        description:
+          "Two brands carried in one voice, covering everything from first site visit to final install. Targeted outreach kept client consultations coming in consistently, alongside a growing following.",
+        tag: "TWO BRANDS, ONE VOICE",
       },
     ],
   },
