@@ -302,6 +302,10 @@ Resonance first. Reach follows.`,
         title: "Lead Generation",
         description: "precision prospecting at scale through Sales Navigator",
       },
+      {
+        title: "Content for the Company Page",
+        description: "editorial strategy and regular posts for your company's LinkedIn presence",
+      },
     ],
     additionalPlatformTitle: "Additional platform",
     additionalPlatform: {
@@ -438,7 +442,7 @@ Resonance first. Reach follows.`,
       "Transparent reporting on posts, growth, and engagement",
     ],
     addonsNote:
-      "Available as add-ons: targeted outreach on LinkedIn, lead generation via Sales Navigator, and content or full account management on X.",
+      "Available as add-ons: targeted outreach on LinkedIn, lead generation via Sales Navigator, content for the company page, and content or full account management on X.",
     cta: "BOOK A CALL TO DISCUSS PRICING",
   },
 
