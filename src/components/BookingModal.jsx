@@ -77,16 +77,16 @@ export const BookingModal = ({ isOpen, onClose }) => {
               href={websiteContent.brand.calendlyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-forest text-cream text-xs font-bold uppercase tracking-wider hover:bg-forest-light transition-all shadow-brand border border-forest-dark"
+              className="mt-4 w-full inline-flex items-center justify-center gap-2 min-h-[48px] px-4 py-3.5 bg-forest text-cream text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-forest-light transition-all shadow-brand border border-forest-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
             >
               <Calendar className="w-4 h-4 text-mint" />
               <span>Schedule Instantly on Calendly</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-4 h-4" />
             </a>
 
             <div className="relative flex py-3 items-center">
               <div className="flex-grow border-t border-charcoal-border/60"></div>
-              <span className="flex-shrink mx-3 text-[11px] font-mono text-charcoal-light uppercase tracking-wider">or send a quick note</span>
+              <span className="flex-shrink mx-3 text-xs font-mono text-charcoal font-bold uppercase tracking-wider">or send a quick note</span>
               <div className="flex-grow border-t border-charcoal-border/60"></div>
             </div>
           </div>
@@ -97,12 +97,12 @@ export const BookingModal = ({ isOpen, onClose }) => {
                 <Check className="w-6 h-6" />
               </div>
               <h4 className="font-display text-xl text-forest font-medium">Opening Your Email Client</h4>
-              <p className="text-sm text-charcoal-muted mt-2">
-                Your prefilled note has been drafted for <span className="font-mono text-xs font-semibold text-charcoal">{websiteContent.brand.email}</span>. Drishti typically responds within 24 hours.
+              <p className="text-base text-charcoal-muted mt-2">
+                Your prefilled note has been drafted for <span className="font-mono text-sm font-bold text-charcoal">{websiteContent.brand.email}</span>. Drishti typically responds within 24 hours.
               </p>
               <button
                 onClick={onClose}
-                className="mt-6 px-6 py-2.5 bg-forest text-cream text-xs font-semibold tracking-wider uppercase hover:bg-forest-light transition-colors"
+                className="mt-6 min-h-[44px] px-6 py-2.5 bg-forest text-cream text-xs sm:text-sm font-bold tracking-wider uppercase hover:bg-forest-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
               >
                 Close Window
               </button>
@@ -111,7 +111,7 @@ export const BookingModal = ({ isOpen, onClose }) => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-charcoal-muted mb-1.5">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-charcoal mb-1.5">
                     Your Name *
                   </label>
                   <input
@@ -120,11 +120,11 @@ export const BookingModal = ({ isOpen, onClose }) => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Alex Sharma"
-                    className="w-full px-3.5 py-2.5 bg-white border border-charcoal-border focus:border-forest focus:ring-1 focus:ring-forest outline-none text-sm text-charcoal"
+                    className="w-full min-h-[44px] px-3.5 py-2.5 bg-white border border-charcoal-border focus:border-forest focus:ring-1 focus:ring-forest outline-none text-base sm:text-sm text-charcoal"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-charcoal-muted mb-1.5">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-charcoal mb-1.5">
                     Work Email *
                   </label>
                   <input
@@ -133,14 +133,14 @@ export const BookingModal = ({ isOpen, onClose }) => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="alex@company.com"
-                    className="w-full px-3.5 py-2.5 bg-white border border-charcoal-border focus:border-forest focus:ring-1 focus:ring-forest outline-none text-sm text-charcoal"
+                    className="w-full min-h-[44px] px-3.5 py-2.5 bg-white border border-charcoal-border focus:border-forest focus:ring-1 focus:ring-forest outline-none text-base sm:text-sm text-charcoal"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-charcoal-muted mb-1.5">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-charcoal mb-1.5">
                     Role & Industry
                   </label>
                   <input
@@ -148,11 +148,11 @@ export const BookingModal = ({ isOpen, onClose }) => {
                     value={formData.role}
                     onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                     placeholder="e.g. Founder, B2B SaaS"
-                    className="w-full px-3.5 py-2.5 bg-white border border-charcoal-border focus:border-forest focus:ring-1 focus:ring-forest outline-none text-sm text-charcoal"
+                    className="w-full min-h-[44px] px-3.5 py-2.5 bg-white border border-charcoal-border focus:border-forest focus:ring-1 focus:ring-forest outline-none text-base sm:text-sm text-charcoal"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-charcoal-muted mb-1.5">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-charcoal mb-1.5">
                     LinkedIn Profile URL
                   </label>
                   <input
@@ -160,13 +160,13 @@ export const BookingModal = ({ isOpen, onClose }) => {
                     value={formData.linkedin}
                     onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })}
                     placeholder="linkedin.com/in/username"
-                    className="w-full px-3.5 py-2.5 bg-white border border-charcoal-border focus:border-forest focus:ring-1 focus:ring-forest outline-none text-sm text-charcoal"
+                    className="w-full min-h-[44px] px-3.5 py-2.5 bg-white border border-charcoal-border focus:border-forest focus:ring-1 focus:ring-forest outline-none text-base sm:text-sm text-charcoal"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-charcoal-muted mb-1.5">
+                <label className="block text-xs font-bold uppercase tracking-wider text-charcoal mb-1.5">
                   Primary Goal / What brings you here?
                 </label>
                 <textarea
@@ -174,14 +174,14 @@ export const BookingModal = ({ isOpen, onClose }) => {
                   value={formData.goal}
                   onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
                   placeholder="e.g. Turn company milestones into high-converting personal thought leadership..."
-                  className="w-full px-3.5 py-2.5 bg-white border border-charcoal-border focus:border-forest focus:ring-1 focus:ring-forest outline-none text-sm text-charcoal resize-none"
+                  className="w-full px-3.5 py-2.5 bg-white border border-charcoal-border focus:border-forest focus:ring-1 focus:ring-forest outline-none text-base sm:text-sm text-charcoal resize-none"
                 />
               </div>
 
               <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-forest text-cream text-xs font-bold uppercase tracking-wider hover:bg-forest-light transition-colors"
+                  className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3.5 bg-forest text-cream text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-forest-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
                 >
                   <Send className="w-4 h-4" />
                   <span>Send Call Request</span>
@@ -190,16 +190,16 @@ export const BookingModal = ({ isOpen, onClose }) => {
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-charcoal-border hover:bg-white text-xs font-medium text-charcoal transition-colors"
+                  className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3 border border-charcoal-border hover:bg-white text-xs sm:text-sm font-semibold text-charcoal transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
                 >
                   {copied ? (
                     <>
-                      <Check className="w-3.5 h-3.5 text-forest" />
-                      <span className="text-forest font-semibold">Email Copied!</span>
+                      <Check className="w-4 h-4 text-forest" />
+                      <span className="text-forest font-bold">Email Copied!</span>
                     </>
                   ) : (
                     <>
-                      <Mail className="w-3.5 h-3.5 text-sage-dark" />
+                      <Mail className="w-4 h-4 text-forest" />
                       <span>Copy Email ({websiteContent.brand.email})</span>
                     </>
                   )}
@@ -208,15 +208,15 @@ export const BookingModal = ({ isOpen, onClose }) => {
             </form>
           )}
 
-          <div className="mt-6 pt-4 border-t border-charcoal-border/50 flex items-center justify-between text-xs text-charcoal-muted">
-            <span className="font-mono">Direct: drishti@netwerked.io</span>
+          <div className="mt-6 pt-4 border-t border-charcoal-border/50 flex items-center justify-between text-xs sm:text-sm text-charcoal-muted">
+            <span className="font-mono text-charcoal font-medium">Direct: drishti@netwerked.io</span>
             <a
               href={websiteContent.brand.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-forest hover:text-forest-dark font-medium underline underline-offset-2"
+              className="inline-flex items-center gap-1.5 text-forest hover:text-forest-dark font-bold underline underline-offset-2 min-h-[44px] px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
             >
-              <Linkedin className="w-3.5 h-3.5" />
+              <Linkedin className="w-4 h-4" />
               <span>Drishti's LinkedIn</span>
             </a>
           </div>

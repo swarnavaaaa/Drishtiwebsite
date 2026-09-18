@@ -46,7 +46,7 @@ export const Pricing = ({ onOpenBooking }) => {
                 {tier.badge && (
                   <div className="absolute -top-3.5 right-6">
                     <span
-                      className={`px-3 py-1 text-[11px] font-bold uppercase tracking-wider font-mono border shadow-2xs ${
+                      className={`px-3 py-1 text-xs font-bold uppercase tracking-wider font-mono border shadow-2xs ${
                         isFeatured
                           ? 'bg-mint text-forest border-sage'
                           : 'bg-cream-subtle text-charcoal border-charcoal-border'
@@ -64,7 +64,7 @@ export const Pricing = ({ onOpenBooking }) => {
                       {tier.name}
                     </h3>
                     <div
-                      className={`font-mono text-sm sm:text-[15px] font-bold uppercase tracking-wider mt-1.5 ${
+                      className={`font-mono text-sm sm:text-base font-bold uppercase tracking-wider mt-1.5 ${
                         isFeatured ? 'text-mint' : 'text-forest'
                       }`}
                     >
@@ -78,8 +78,8 @@ export const Pricing = ({ onOpenBooking }) => {
                       {tier.pitch}
                     </p>
                     <p
-                      className={`text-sm sm:text-[15px] leading-relaxed font-normal ${
-                        isFeatured ? 'text-cream/80' : 'text-charcoal/80'
+                      className={`text-base leading-relaxed font-normal ${
+                        isFeatured ? 'text-cream/90' : 'text-charcoal'
                       }`}
                     >
                       {tier.idealFor}
@@ -87,24 +87,24 @@ export const Pricing = ({ onOpenBooking }) => {
                   </div>
                 </div>
 
-                {/* Card Bottom CTA (Min 48px tap target) */}
+                {/* Card Bottom CTA (Min 48px tap target + accessible focus ring) */}
                 <div className="pt-8 mt-8 border-t border-current/15">
                   <a
                     href={brand?.calendlyUrl || websiteContent.brand.calendlyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-full inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-brand ${
+                    className={`w-full inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 text-xs sm:text-sm font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
                       isFeatured
-                        ? 'bg-mint text-forest hover:bg-cream active:scale-[0.99]'
-                        : 'bg-forest text-cream hover:bg-forest-light active:scale-[0.99]'
+                        ? 'bg-mint text-forest hover:bg-cream active:scale-[0.99] focus-visible:ring-mint focus-visible:ring-offset-forest'
+                        : 'bg-forest text-cream hover:bg-forest-light active:scale-[0.99] focus-visible:ring-forest'
                     }`}
                   >
                     <span>{pricing.cta}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                   <p
-                    className={`text-center text-[11px] mt-2.5 font-mono ${
-                      isFeatured ? 'text-mint/70' : 'text-charcoal-light'
+                    className={`text-center text-xs mt-2.5 font-mono ${
+                      isFeatured ? 'text-mint/80 font-medium' : 'text-charcoal-muted font-medium'
                     }`}
                   >
                     Investment shared on discovery call
@@ -121,7 +121,7 @@ export const Pricing = ({ onOpenBooking }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
-          className="p-7 sm:p-9 bg-white/90 backdrop-blur-xs border border-charcoal-border shadow-card hover:border-forest/40 transition-colors space-y-6"
+          className="p-7 sm:p-9 bg-white/95 backdrop-blur-xs border border-charcoal-border shadow-card hover:border-forest/40 transition-colors space-y-6"
         >
           <div className="max-w-3xl">
             <h4 className="font-display text-2xl sm:text-3xl text-charcoal font-medium tracking-tight">
@@ -131,15 +131,15 @@ export const Pricing = ({ onOpenBooking }) => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {pricing.inclusions.map((item, idx) => (
-              <div key={idx} className="flex items-start gap-2.5 text-sm sm:text-[15px] text-charcoal/90 font-medium">
-                <Check className="w-4 h-4 text-forest flex-shrink-0 mt-0.5 stroke-[2.5]" />
+              <div key={idx} className="flex items-start gap-2.5 text-base text-charcoal font-medium">
+                <Check className="w-4 h-4 text-forest flex-shrink-0 mt-1 stroke-[2.5]" />
                 <span>{item}</span>
               </div>
             ))}
           </div>
 
           {/* Add-ons Footer Note */}
-          <div className="pt-6 border-t border-charcoal-border/40 flex flex-col sm:flex-row items-start sm:items-center gap-3 text-xs sm:text-sm font-mono text-charcoal-muted">
+          <div className="pt-6 border-t border-charcoal-border/40 flex flex-col sm:flex-row items-start sm:items-center gap-3 text-xs sm:text-sm font-mono text-charcoal font-medium">
             <span className="px-2.5 py-1 bg-mint/50 border border-sage/40 text-forest font-bold uppercase tracking-wider shrink-0">
               Add-Ons
             </span>

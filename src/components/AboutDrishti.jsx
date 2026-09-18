@@ -37,11 +37,11 @@ export const AboutDrishti = ({ onOpenBooking }) => {
               {about.greeting}
             </h2>
 
-            <div className="space-y-5 text-[15px] sm:text-base md:text-[17px] text-charcoal/85 leading-relaxed font-normal">
+            <div className="space-y-5 text-base sm:text-lg md:text-[19px] text-charcoal leading-relaxed font-normal">
               {about.paragraphs.map((paragraph, idx) => (
                 <p
                   key={idx}
-                  className={idx === 0 ? 'text-base sm:text-lg md:text-xl text-charcoal font-medium leading-relaxed' : ''}
+                  className={idx === 0 ? 'text-lg sm:text-xl md:text-2xl text-charcoal font-medium leading-relaxed' : ''}
                 >
                   {paragraph}
                 </p>
@@ -55,7 +55,7 @@ export const AboutDrishti = ({ onOpenBooking }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45, delay: 0.08 }}
-            className="p-6 sm:p-7 bg-white/90 backdrop-blur-xs border border-charcoal-border shadow-card space-y-3.5 hover:border-forest/40 transition-colors"
+            className="p-6 sm:p-7 bg-white/95 backdrop-blur-xs border border-charcoal-border shadow-card space-y-3.5 hover:border-forest/40 transition-colors"
           >
             <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-forest font-mono">
               Track Record
@@ -79,7 +79,7 @@ export const AboutDrishti = ({ onOpenBooking }) => {
             </div>
           </motion.div>
 
-          {/* Action Channels (All 3 Buttons with min 48px touch target) */}
+          {/* Action Channels (All 3 Buttons with min 48px touch target + visible focus rings) */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +92,7 @@ export const AboutDrishti = ({ onOpenBooking }) => {
               href={brand.calendlyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3.5 bg-forest text-cream text-xs font-bold uppercase tracking-wider hover:bg-forest-light hover:shadow-brand hover:-translate-y-0.5 active:translate-y-0 transition-all border border-forest-dark cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3.5 bg-forest text-cream text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-forest-light hover:shadow-brand hover:-translate-y-0.5 active:translate-y-0 transition-all border border-forest-dark cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
             >
               <span>Book a Discovery Call</span>
               <ArrowUpRight className="w-4 h-4" />
@@ -103,7 +103,7 @@ export const AboutDrishti = ({ onOpenBooking }) => {
               href={brand.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 bg-mint text-forest hover:bg-forest hover:text-cream border border-sage/50 text-xs font-bold uppercase tracking-wider hover:-translate-y-0.5 active:translate-y-0 transition-all shadow-2xs"
+              className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 bg-mint text-forest hover:bg-forest hover:text-cream border border-sage/50 text-xs sm:text-sm font-bold uppercase tracking-wider hover:-translate-y-0.5 active:translate-y-0 transition-all shadow-2xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
             >
               <Linkedin className="w-4 h-4" />
               <span>Drishti's LinkedIn Profile</span>
@@ -113,9 +113,9 @@ export const AboutDrishti = ({ onOpenBooking }) => {
             {/* Email Contact Button */}
             <a
               href={`mailto:${brand.email}`}
-              className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 bg-white/90 hover:bg-white text-charcoal text-xs font-semibold tracking-wide border border-charcoal-border hover:border-forest/40 hover:-translate-y-0.5 active:translate-y-0 transition-all shadow-2xs"
+              className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 bg-white/95 hover:bg-white text-charcoal text-xs sm:text-sm font-semibold tracking-wide border border-charcoal-border hover:border-forest/40 hover:-translate-y-0.5 active:translate-y-0 transition-all shadow-2xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
             >
-              <Mail className="w-3.5 h-3.5 text-sage-dark" />
+              <Mail className="w-3.5 h-3.5 text-forest" />
               <span>{brand.email}</span>
             </a>
           </motion.div>

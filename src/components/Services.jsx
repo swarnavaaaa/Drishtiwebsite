@@ -69,18 +69,18 @@ export const Services = ({ onOpenBooking }) => {
                   {model.title}
                 </h4>
 
-                <p className="text-[15px] sm:text-base text-charcoal/85 leading-relaxed font-normal mb-7">
+                <p className="text-base sm:text-lg text-charcoal leading-relaxed font-normal mb-7">
                   {model.description}
                 </p>
 
                 {/* Deliverables Checklist */}
-                <div className="space-y-3 pt-2">
+                <div className="space-y-3.5 pt-2">
                   {model.deliverables.map((item, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-mint/70 text-forest flex items-center justify-center shrink-0 mt-0.5 border border-sage/50">
-                        <Check className="w-3 h-3 text-forest stroke-[2.5]" />
+                      <div className="w-5 h-5 rounded-full bg-mint/80 text-forest flex items-center justify-center shrink-0 mt-0.5 border border-sage/60">
+                        <Check className="w-3.5 h-3.5 text-forest stroke-[2.5]" />
                       </div>
-                      <span className="text-sm sm:text-[15px] text-charcoal font-medium leading-normal">
+                      <span className="text-base sm:text-[17px] text-charcoal font-medium leading-snug">
                         {item}
                       </span>
                     </div>
@@ -153,10 +153,10 @@ export const Services = ({ onOpenBooking }) => {
           >
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-charcoal-border/50 mb-5">
-                <span className="text-xs font-mono text-forest font-bold uppercase tracking-wider">
+                <span className="text-xs sm:text-sm font-mono text-forest font-bold uppercase tracking-wider">
                   Enhance Your Retainer
                 </span>
-                <span className="px-2.5 py-0.5 bg-mint/40 text-forest text-[11px] font-mono font-semibold uppercase">
+                <span className="px-2.5 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-mono font-bold uppercase">
                   Add-Ons
                 </span>
               </div>
@@ -167,14 +167,14 @@ export const Services = ({ onOpenBooking }) => {
 
               <div className="space-y-4">
                 {services.addons.map((addon, idx) => (
-                  <div key={idx} className="p-4 bg-cream-subtle/50 border border-charcoal-border/40 space-y-1">
+                  <div key={idx} className="p-4 sm:p-4.5 bg-cream-subtle/60 border border-charcoal-border/50 space-y-1.5">
                     <div className="flex items-center gap-2">
                       <Plus className="w-4 h-4 text-forest shrink-0 stroke-[2.5]" />
-                      <span className="font-sans font-bold text-base text-charcoal">
+                      <span className="font-sans font-bold text-base sm:text-lg text-charcoal">
                         {addon.title}
                       </span>
                     </div>
-                    <p className="text-sm text-charcoal-muted pl-6 leading-relaxed">
+                    <p className="text-base text-charcoal-muted pl-6 leading-relaxed">
                       — {addon.description}
                     </p>
                   </div>
@@ -182,7 +182,7 @@ export const Services = ({ onOpenBooking }) => {
               </div>
             </div>
 
-            <div className="pt-5 mt-6 border-t border-charcoal-border/30 text-xs font-mono text-charcoal-light">
+            <div className="pt-5 mt-6 border-t border-charcoal-border/40 text-xs sm:text-sm font-mono text-charcoal-muted font-medium">
               Available alongside any active retainer
             </div>
           </motion.div>
@@ -197,10 +197,10 @@ export const Services = ({ onOpenBooking }) => {
           >
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-charcoal-border/50 mb-5">
-                <span className="text-xs font-mono text-forest font-bold uppercase tracking-wider">
+                <span className="text-xs sm:text-sm font-mono text-forest font-bold uppercase tracking-wider">
                   Multi-Channel Reach
                 </span>
-                <span className="px-2.5 py-0.5 bg-mint/40 text-forest text-[11px] font-mono font-semibold uppercase">
+                <span className="px-2.5 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-mono font-bold uppercase">
                   Expansion
                 </span>
               </div>
@@ -209,22 +209,22 @@ export const Services = ({ onOpenBooking }) => {
                 {services.additionalPlatformTitle}
               </h4>
 
-              <div className="p-5 bg-cream-subtle/50 border border-charcoal-border/40 space-y-2">
+              <div className="p-5 bg-cream-subtle/60 border border-charcoal-border/50 space-y-2.5">
                 <div className="flex items-center gap-2.5">
-                  <span className="font-mono text-xl font-extrabold text-forest px-2.5 py-0.5 bg-mint/60 border border-sage/50">
+                  <span className="font-mono text-xl sm:text-2xl font-extrabold text-forest px-3 py-1 bg-mint/60 border border-sage/50">
                     {services.additionalPlatform.platform}
                   </span>
-                  <span className="font-sans font-bold text-lg text-charcoal">
+                  <span className="font-sans font-bold text-lg sm:text-xl text-charcoal">
                     Platform Management
                   </span>
                 </div>
-                <p className="text-sm sm:text-base text-charcoal-muted leading-relaxed pt-1">
+                <p className="text-base sm:text-lg text-charcoal leading-relaxed pt-1">
                   — {services.additionalPlatform.description}
                 </p>
               </div>
             </div>
 
-            <div className="pt-5 mt-6 border-t border-charcoal-border/30 text-xs font-mono text-charcoal-light">
+            <div className="pt-5 mt-6 border-t border-charcoal-border/40 text-xs sm:text-sm font-mono text-charcoal-muted font-medium">
               Unified cross-channel narrative & execution
             </div>
           </motion.div>
@@ -272,7 +272,7 @@ export const Services = ({ onOpenBooking }) => {
                     <span className="font-mono text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest group-hover:text-forest-dark transition-colors tracking-tight leading-none">
                       {belief.number}
                     </span>
-                    <span className="px-2.5 py-1 bg-mint/50 border border-sage/40 text-forest text-[11px] font-mono font-bold uppercase tracking-wider">
+                    <span className="px-3 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-mono font-bold uppercase tracking-wider">
                       Belief {belief.number}
                     </span>
                   </div>
@@ -281,12 +281,12 @@ export const Services = ({ onOpenBooking }) => {
                     {belief.title}
                   </h4>
 
-                  <p className="text-[15px] sm:text-base text-charcoal/85 leading-relaxed font-normal">
+                  <p className="text-base sm:text-lg text-charcoal leading-relaxed font-normal">
                     {belief.description}
                   </p>
                 </div>
 
-                <div className="pt-5 mt-6 border-t border-charcoal-border/30 text-xs font-mono text-sage-dark uppercase tracking-wider font-semibold">
+                <div className="pt-5 mt-6 border-t border-charcoal-border/30 text-xs sm:text-sm font-mono text-forest uppercase tracking-wider font-bold">
                   Netwerked Standard
                 </div>
               </motion.div>
@@ -304,7 +304,7 @@ export const Services = ({ onOpenBooking }) => {
               href={brand.calendlyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 min-h-[50px] px-7 py-4 bg-mint text-forest hover:bg-white hover:text-forest active:scale-[0.98] text-xs sm:text-sm font-mono font-bold uppercase tracking-wider transition-all shadow-brand cursor-pointer shrink-0"
+              className="inline-flex items-center gap-3 min-h-[50px] px-7 py-4 bg-mint text-forest hover:bg-white hover:text-forest active:scale-[0.98] text-xs sm:text-sm font-mono font-bold uppercase tracking-wider transition-all shadow-brand cursor-pointer shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint focus-visible:ring-offset-2 focus-visible:ring-offset-forest"
             >
               <span>{services.approach.ctaText}</span>
               <ArrowRight className="w-4 h-4" />

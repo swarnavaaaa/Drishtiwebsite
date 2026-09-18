@@ -51,6 +51,14 @@ export function App() {
 
   return (
     <div className="min-h-screen relative text-charcoal flex flex-col font-sans selection:bg-mint selection:text-forest overflow-x-hidden">
+      {/* Accessible skip-link for keyboard & screen-reader users */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2.5 focus:bg-forest focus:text-cream focus:font-bold focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-mint"
+      >
+        Skip to main content
+      </a>
+
       {/* Ambient background with floating gradient orbs and micro-grain texture */}
       <AmbientBackground />
 
@@ -58,7 +66,7 @@ export function App() {
       <Navbar onOpenBooking={handleOpenBooking} />
 
       {/* Main Content */}
-      <main className="flex-grow relative z-10">
+      <main id="main-content" tabIndex="-1" className="flex-grow relative z-10 outline-none">
         {/* 1. Hero */}
         <Hero onOpenBooking={handleOpenBooking} />
 

@@ -48,7 +48,7 @@ export const WhyPersonalBranding = () => {
                 <h3 className="font-sans font-bold text-xl sm:text-2xl text-charcoal tracking-tight mb-3 group-hover:text-forest transition-colors duration-200">
                   {benefit.title}
                 </h3>
-                <p className="text-[15px] sm:text-base text-charcoal/85 leading-relaxed font-normal">
+                <p className="text-base sm:text-lg text-charcoal leading-relaxed font-normal">
                   {benefit.description}
                 </p>
               </div>
@@ -57,7 +57,7 @@ export const WhyPersonalBranding = () => {
                 <span className="text-xs sm:text-sm font-mono text-forest font-bold uppercase tracking-wider">
                   {benefit.tag}
                 </span>
-                <span className="text-xs font-mono text-charcoal-light opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-xs font-mono text-charcoal-muted opacity-0 group-hover:opacity-100 transition-opacity">
                   netwerked.io
                 </span>
               </div>

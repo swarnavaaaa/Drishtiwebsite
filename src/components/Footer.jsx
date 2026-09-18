@@ -14,13 +14,13 @@ export const Footer = () => {
             <LogoMark theme="dark" />
           </div>
 
-          {/* Quick links with min 44px touch targets */}
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-6 text-xs text-cream/70">
+          {/* Quick links with min 44px touch targets + accessible focus */}
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-6 text-sm text-cream/85 font-medium">
             {navigation.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="inline-flex items-center min-h-[44px] px-2.5 hover:text-mint transition-colors"
+                className="inline-flex items-center min-h-[44px] px-2.5 hover:text-mint transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal"
               >
                 {item.label}
               </a>
@@ -28,9 +28,9 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/50 text-center sm:text-left">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-cream/80 text-center sm:text-left">
           <p>{finalCta.copyright}</p>
-          <p className="font-mono text-[11px]">
+          <p className="font-mono text-xs sm:text-sm text-cream/70">
             Designed with craft for founders across industries.
           </p>
         </div>

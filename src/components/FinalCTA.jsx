@@ -35,7 +35,7 @@ export const FinalCTA = ({ onOpenBooking }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45, delay: 0.05 }}
-          className="font-display text-2xl sm:text-3xl md:text-5xl text-cream font-normal tracking-tight max-w-3xl mx-auto leading-[1.15]"
+          className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-cream font-normal tracking-tight max-w-3xl mx-auto leading-[1.12]"
         >
           Let's write the version of your story{' '}
           <span className="italic font-light text-mint">the internet remembers.</span>
@@ -46,7 +46,7 @@ export const FinalCTA = ({ onOpenBooking }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45, delay: 0.1 }}
-          className="text-xs sm:text-sm text-cream/80 max-w-lg mx-auto font-normal leading-relaxed"
+          className="text-base sm:text-lg md:text-xl text-cream/90 max-w-xl mx-auto font-normal leading-relaxed"
         >
           Whether you are launching a venture, scaling an advisory practice, or elevating executive thought leadership, your voice starts here.
         </motion.p>
@@ -57,44 +57,44 @@ export const FinalCTA = ({ onOpenBooking }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45, delay: 0.15 }}
-          className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3"
+          className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5"
         >
           <a
             href={brand.calendlyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 min-h-[44px] px-7 py-3 bg-mint text-forest text-xs font-bold uppercase tracking-wider hover:bg-cream hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer shadow-brand"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 min-h-[48px] px-8 py-3.5 bg-mint text-forest text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-cream hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer shadow-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint focus-visible:ring-offset-2 focus-visible:ring-offset-forest"
           >
             <span>{finalCta.buttonText}</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-4 h-4" />
           </a>
 
           <button
             onClick={handleCopyEmail}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 min-h-[44px] px-5 py-3 bg-forest-surface hover:bg-forest-dark text-cream text-xs font-medium tracking-wide border border-sage/40 hover:border-sage/70 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3.5 bg-forest-surface hover:bg-forest-dark text-cream text-xs sm:text-sm font-semibold tracking-wide border border-sage/40 hover:border-sage/70 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint focus-visible:ring-offset-2 focus-visible:ring-offset-forest"
           >
             {copied ? (
               <>
-                <Check className="w-3.5 h-3.5 text-mint" />
-                <span className="text-mint font-semibold">Copied ({brand.email})</span>
+                <Check className="w-4 h-4 text-mint" />
+                <span className="text-mint font-bold">Copied ({brand.email})</span>
               </>
             ) : (
               <>
-                <Mail className="w-3.5 h-3.5 text-sage-light" />
+                <Mail className="w-4 h-4 text-mint" />
                 <span>{brand.email}</span>
-                <Copy className="w-3 h-3 text-sage-light ml-1 opacity-60" />
+                <Copy className="w-3.5 h-3.5 text-mint ml-1 opacity-70" />
               </>
             )}
           </button>
         </motion.div>
 
         {/* Direct Channels Bar */}
-        <div className="pt-6 border-t border-sage/20 flex flex-wrap items-center justify-center gap-3 sm:gap-8 text-xs text-cream/80">
+        <div className="pt-6 border-t border-sage/25 flex flex-wrap items-center justify-center gap-3 sm:gap-8 text-xs sm:text-sm text-cream/90">
           <a
             href={`mailto:${brand.email}`}
-            className="inline-flex items-center gap-1.5 min-h-[40px] px-2 hover:text-mint transition-colors font-mono text-[11px] sm:text-xs"
+            className="inline-flex items-center gap-2 min-h-[44px] px-2 hover:text-mint transition-colors font-mono text-xs sm:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint"
           >
-            <Mail className="w-3 h-3 text-sage-light" />
+            <Mail className="w-4 h-4 text-mint" />
             <span>{brand.email}</span>
           </a>
 
@@ -102,9 +102,9 @@ export const FinalCTA = ({ onOpenBooking }) => {
 
           <a
             href={`https://${brand.domain}`}
-            className="inline-flex items-center gap-1.5 min-h-[40px] px-2 hover:text-mint transition-colors font-mono text-[11px] sm:text-xs"
+            className="inline-flex items-center gap-2 min-h-[44px] px-2 hover:text-mint transition-colors font-mono text-xs sm:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint"
           >
-            <Globe className="w-3 h-3 text-sage-light" />
+            <Globe className="w-4 h-4 text-mint" />
             <span>{brand.domain}</span>
           </a>
 
@@ -114,9 +114,9 @@ export const FinalCTA = ({ onOpenBooking }) => {
             href={brand.linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 min-h-[40px] px-2 hover:text-mint transition-colors font-mono underline underline-offset-4 text-[11px] sm:text-xs"
+            className="inline-flex items-center gap-2 min-h-[44px] px-2 hover:text-mint transition-colors font-mono underline underline-offset-4 text-xs sm:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint"
           >
-            <Linkedin className="w-3 h-3 text-sage-light" />
+            <Linkedin className="w-4 h-4 text-mint" />
             <span>{brand.linkedinUrl.replace('https://', '')}</span>
           </a>
         </div>

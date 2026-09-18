@@ -45,8 +45,8 @@ export const OurWork = ({ onOpenBooking }) => {
                   <span className="font-mono text-2xl sm:text-3xl lg:text-4xl font-extrabold text-forest group-hover:text-forest-dark transition-colors leading-none">
                     {item.number || `0${idx + 1}`}
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-mint/40 border border-sage/30 text-[11px] font-mono text-forest font-bold uppercase tracking-wider">
-                    <Shield className="w-3 h-3 text-forest" />
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-mint/50 border border-sage/40 text-xs font-mono text-forest font-bold uppercase tracking-wider">
+                    <Shield className="w-3.5 h-3.5 text-forest" />
                     CONFIDENTIAL
                   </span>
                 </div>
@@ -57,7 +57,7 @@ export const OurWork = ({ onOpenBooking }) => {
                 </h3>
 
                 {/* Engagement Description */}
-                <p className="text-[15px] sm:text-base text-charcoal/85 leading-relaxed font-normal">
+                <p className="text-base sm:text-lg text-charcoal leading-relaxed font-normal">
                   {item.description}
                 </p>
               </div>
@@ -67,7 +67,7 @@ export const OurWork = ({ onOpenBooking }) => {
                 <span className="text-xs sm:text-sm font-mono text-forest font-bold uppercase tracking-wider">
                   {item.tag}
                 </span>
-                <span className="text-xs font-mono text-charcoal-light opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-xs font-mono text-charcoal-muted opacity-0 group-hover:opacity-100 transition-opacity">
                   netwerked.io
                 </span>
               </div>
@@ -81,7 +81,7 @@ export const OurWork = ({ onOpenBooking }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
-          className="p-8 sm:p-12 bg-white/90 backdrop-blur-xs border border-charcoal-border text-center max-w-4xl mx-auto space-y-6 shadow-card hover:border-forest/40 transition-all"
+          className="p-8 sm:p-12 bg-white/95 backdrop-blur-xs border border-charcoal-border text-center max-w-4xl mx-auto space-y-6 shadow-card hover:border-forest/40 transition-all"
         >
           <div className="space-y-2">
             <p className="font-display text-xl sm:text-2xl md:text-3xl text-charcoal font-normal italic leading-relaxed">
@@ -97,7 +97,7 @@ export const OurWork = ({ onOpenBooking }) => {
               href={brand?.calendlyUrl || websiteContent.brand.calendlyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 min-h-[50px] px-8 py-4 bg-forest text-cream text-xs sm:text-sm font-mono font-bold uppercase tracking-wider hover:bg-forest-light hover:shadow-brand hover:-translate-y-0.5 active:translate-y-0 transition-all border border-forest-dark cursor-pointer"
+              className="inline-flex items-center justify-center gap-3 min-h-[50px] px-8 py-4 bg-forest text-cream text-xs sm:text-sm font-mono font-bold uppercase tracking-wider hover:bg-forest-light hover:shadow-brand hover:-translate-y-0.5 active:translate-y-0 transition-all border border-forest-dark cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
             >
               <span>{ourWork.ctaText || "BOOK A DISCOVERY CALL"}</span>
               <ArrowRight className="w-4 h-4" />

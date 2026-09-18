@@ -81,15 +81,15 @@ export const Navbar = ({ onOpenBooking }) => {
             </a>
 
             {/* Desktop Navigation with Active Scrollspy */}
-            <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
+            <nav className="hidden md:flex items-center space-x-1 lg:space-x-2" aria-label="Main Navigation">
               {websiteContent.navigation.map((item) => {
                 const isActive = activeSection === item.href;
                 return (
                   <a
                     key={item.label}
                     href={item.href}
-                    className={`relative px-3.5 py-2 text-sm font-medium transition-colors tracking-tight ${
-                      isActive ? 'text-forest font-semibold' : 'text-charcoal/80 hover:text-forest'
+                    className={`relative px-3.5 py-2 text-sm lg:text-[15px] font-semibold transition-colors tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest ${
+                      isActive ? 'text-forest font-bold' : 'text-charcoal/85 hover:text-forest'
                     }`}
                   >
                     {item.label}
@@ -111,10 +111,10 @@ export const Navbar = ({ onOpenBooking }) => {
                 href={websiteContent.brand.calendlyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 min-h-[44px] bg-forest text-cream text-xs font-bold uppercase tracking-wider hover:bg-forest-light hover:shadow-brand active:scale-[0.98] transition-all border border-forest-dark"
+                className="inline-flex items-center gap-2 px-5 py-2.5 min-h-[44px] bg-forest text-cream text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-forest-light hover:shadow-brand active:scale-[0.98] transition-all border border-forest-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
               >
                 <span>Book a Call</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
+                <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
 
@@ -122,7 +122,7 @@ export const Navbar = ({ onOpenBooking }) => {
             <div className="flex md:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="w-11 h-11 flex items-center justify-center text-charcoal hover:bg-mint/40 active:scale-95 transition-all focus:outline-none"
+                className="w-11 h-11 flex items-center justify-center text-charcoal hover:bg-mint/40 active:scale-95 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-forest"
                 aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={mobileMenuOpen}
               >

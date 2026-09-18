@@ -75,7 +75,7 @@ export const FAQ = ({ onOpenBooking }) => {
                       transition={{ duration: 0.25, ease: "easeOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 sm:px-7 pb-6 text-[15px] sm:text-base text-charcoal/85 leading-relaxed border-t border-charcoal-border/40 pt-4 font-normal">
+                      <div className="px-5 sm:px-7 pb-6 text-base sm:text-lg text-charcoal leading-relaxed border-t border-charcoal-border/40 pt-4 font-normal">
                         {item.answer}
                       </div>
                     </motion.div>
@@ -88,13 +88,13 @@ export const FAQ = ({ onOpenBooking }) => {
 
         {/* Bottom Question Help */}
         <div className="mt-14 text-center">
-          <p className="text-sm sm:text-base text-charcoal-muted">
+          <p className="text-base sm:text-lg text-charcoal-muted">
             {faq.footerText || "Have a specific scenario to talk through?"}{' '}
             <a
               href={websiteContent.brand.calendlyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-forest font-bold underline underline-offset-4 hover:text-forest-dark transition-colors cursor-pointer"
+              className="text-forest font-bold underline underline-offset-4 hover:text-forest-dark transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2 p-1"
             >
               {faq.footerLinkText || "Ask Drishti directly on a discovery call."}
             </a>
