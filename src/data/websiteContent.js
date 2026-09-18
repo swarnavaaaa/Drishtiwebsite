@@ -282,6 +282,63 @@ Resonance first. Reach follows.`,
       platform: "X",
       description: "content creation or complete account management, same standard as LinkedIn",
     },
+    approach: {
+      eyebrow: "OUR APPROACH",
+      heading: "We read first, then we write.",
+      subtext:
+        "Your profile, your work, and the audience you want to reach shape every post before a word gets written. The approach rests on three beliefs.",
+      beliefs: [
+        {
+          number: "01",
+          title: "Specificity Carries a Brand",
+          description:
+            "A post that shows a real decision, a sharp opinion, or an honest lesson earns attention and trust. We write for resonance first, reach second.",
+        },
+        {
+          number: "02",
+          title: "Consistency Compounds",
+          description:
+            "LinkedIn rewards leaders who show up regularly with original, relevant thinking. Steady presence turns a strong profile into a growing one.",
+        },
+        {
+          number: "03",
+          title: "The Voice Stays Yours",
+          description:
+            "Every post sounds like you, built through onboarding, ongoing calibration, and a genuine understanding of how you think and speak.",
+        },
+      ],
+      closingLine: "Ready for content that sounds like the leader you already are?",
+      ctaText: "BOOK A DISCOVERY CALL",
+    },
+  },
+
+  approach: {
+    eyebrow: "OUR APPROACH",
+    heading: "We read first, then we write.",
+    subtext:
+      "Your profile, your work, and the audience you want to reach shape every post before a word gets written. The approach rests on three beliefs.",
+    beliefs: [
+      {
+        number: "01",
+        title: "Specificity Carries a Brand",
+        description:
+          "A post that shows a real decision, a sharp opinion, or an honest lesson earns attention and trust. We write for resonance first, reach second.",
+      },
+      {
+        number: "02",
+        title: "Consistency Compounds",
+        description:
+          "LinkedIn rewards leaders who show up regularly with original, relevant thinking. Steady presence turns a strong profile into a growing one.",
+      },
+      {
+        number: "03",
+        title: "The Voice Stays Yours",
+        description:
+          "Every post sounds like you, built through onboarding, ongoing calibration, and a genuine understanding of how you think and speak.",
+      },
+    ],
+    closingLine: "Ready for content that sounds like the leader you already are?",
+    ctaText: "BOOK A DISCOVERY CALL",
   },
 
   process: {

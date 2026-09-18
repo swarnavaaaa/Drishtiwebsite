@@ -231,35 +231,85 @@ export const Services = ({ onOpenBooking }) => {
 
         </div>
 
-        {/* Discovery Call CTA Banner */}
+        {/* Our Approach (3 Core Beliefs Callout Block) */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-forest text-cream p-8 sm:p-11 border border-forest-dark relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+          className="bg-forest text-cream p-8 sm:p-12 lg:p-14 border border-forest-dark relative overflow-hidden shadow-2xl space-y-10"
         >
-          <div className="space-y-2 max-w-2xl relative z-10">
-            <span className="text-xs font-mono text-mint uppercase tracking-widest font-semibold block">
-              Get Started
-            </span>
-            <h3 className="font-display text-2xl sm:text-3xl text-cream font-medium tracking-tight">
-              Ready to replace outbound friction with inbound leverage?
+          {/* Header */}
+          <div className="max-w-3xl space-y-3 relative z-10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-mint/20 border border-mint/40 text-mint text-xs sm:text-sm font-mono font-bold uppercase tracking-widest">
+              {services.approach.eyebrow}
+            </div>
+            <h3 className="font-display text-3xl sm:text-5xl md:text-6xl text-white font-normal tracking-tight leading-[1.12]">
+              We read first, <span className="italic font-light text-mint">then we write.</span>
             </h3>
-            <p className="text-xs sm:text-sm text-cream/80 leading-relaxed">
-              Pick the model that fits your cadence. We'll map out your voice, niche, and strategic narrative on a 20-minute discovery call.
+            <p className="text-base sm:text-lg md:text-xl text-cream/90 max-w-3xl leading-relaxed pt-1">
+              {services.approach.subtext}
             </p>
           </div>
 
-          <a
-            href={brand.calendlyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 min-h-[48px] px-6 py-3.5 bg-mint text-forest hover:bg-cream active:scale-[0.98] text-xs font-bold uppercase tracking-wider transition-all shadow-brand cursor-pointer shrink-0"
-          >
-            <span>Book a Discovery Call</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          <div className="h-px bg-white/20 relative z-10" />
+
+          {/* 3 Belief Cards Grid with White & Light Green Styling */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 relative z-10">
+            {services.approach.beliefs.map((belief, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.08 }}
+                className={`p-7 sm:p-8 bg-white/95 text-charcoal border-2 border-mint/40 hover:border-mint hover:-translate-y-1 transition-all duration-200 shadow-xl flex flex-col justify-between group ${
+                  idx === 1 ? 'bg-gradient-to-b from-mint-light/60 to-white border-mint/60' : ''
+                }`}
+              >
+                <div>
+                  <div className="flex items-center justify-between pb-4 border-b border-charcoal-border/50 mb-5">
+                    <span className="font-mono text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest group-hover:text-forest-dark transition-colors tracking-tight leading-none">
+                      {belief.number}
+                    </span>
+                    <span className="px-2.5 py-1 bg-mint/50 border border-sage/40 text-forest text-[11px] font-mono font-bold uppercase tracking-wider">
+                      Belief {belief.number}
+                    </span>
+                  </div>
+
+                  <h4 className="font-sans font-bold text-xl sm:text-2xl text-charcoal tracking-tight mb-3 group-hover:text-forest transition-colors">
+                    {belief.title}
+                  </h4>
+
+                  <p className="text-[15px] sm:text-base text-charcoal/85 leading-relaxed font-normal">
+                    {belief.description}
+                  </p>
+                </div>
+
+                <div className="pt-5 mt-6 border-t border-charcoal-border/30 text-xs font-mono text-sage-dark uppercase tracking-wider font-semibold">
+                  Netwerked Standard
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="h-px bg-white/20 relative z-10" />
+
+          {/* Closing Line + CTA */}
+          <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative z-10">
+            <p className="text-lg sm:text-xl md:text-2xl text-white font-medium max-w-xl leading-snug">
+              {services.approach.closingLine}
+            </p>
+            <a
+              href={brand.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 min-h-[50px] px-7 py-4 bg-mint text-forest hover:bg-white hover:text-forest active:scale-[0.98] text-xs sm:text-sm font-mono font-bold uppercase tracking-wider transition-all shadow-brand cursor-pointer shrink-0"
+            >
+              <span>{services.approach.ctaText}</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </motion.div>
 
       </div>
