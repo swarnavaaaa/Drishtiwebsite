@@ -443,37 +443,41 @@ Resonance first. Reach follows.`,
   },
 
   faq: {
-    heading: "Frequently Asked Questions",
+    heading: "FREQUENTLY ASKED QUESTIONS",
+    subheading: "Clear answers to common questions.",
+    subtext: "Everything you need to know about partnering with Netwerked for your LinkedIn presence.",
+    footerText: "Have a specific scenario to talk through?",
+    footerLinkText: "Ask Drishti directly on a discovery call.",
     items: [
       {
         question: "Will it actually sound like me?",
         answer:
-          "Every post starts with onboarding and goes through constant calibration. You review and approve before anything goes live. If it needs to sound more like you, it gets rewritten until it does.",
+          "Yes, and that's the whole point. We start with a deep onboarding to learn how you think, talk, and make decisions. Every post is written by hand in your voice, and you review and approve before anything goes live. If a draft needs to sound more like you, we rewrite it until it does. Over the first few weeks the calibration gets sharper, and soon people who know you well assume you wrote every word yourself.",
       },
       {
         question: "How long until I see results?",
         answer:
-          "LinkedIn growth compounds. Most clients see profile activity and inbound messages shift within the first 60 to 90 days. Visible follower and reach growth builds from there.",
+          "Early signals like stronger reach, better comments, and profile views from the right people usually show within the first four to six weeks. Inbound conversations, clients, talent, and press reaching out, tend to build from month two or three as your presence compounds. This is a long-term asset, so the value keeps climbing the longer you stay consistent. We track the movement and review it with you every two weeks.",
       },
       {
         question: "What if my schedule is too packed to review every post?",
         answer:
-          "That's exactly the point. Strategy, writing, design, and outreach are handled end to end. Your part is a monthly call and a quick approval pass.",
+          "That's exactly what the model is built for. Most clients spend under thirty minutes a week on this. If you want lighter involvement, our Complete Account Management option hands the whole engine to us: we write, post, and engage on your behalf, and you stay informed through a rhythm that fits your calendar. You stay as hands-on or hands-off as you like.",
       },
       {
         question: "Do you work with my industry?",
         answer:
-          "Netwerked has written for founders and leaders across financial modeling, AI, sports, market research, consulting, and hospitality. Every account keeps its own voice, built on the same underlying strategy.",
+          "Almost certainly. Current clients span finance, AI and tech, sports, market research, consulting, manufacturing, and more. The craft is in learning your world deeply enough to write with authority in it, and a background in risk and compliance at Deloitte and KPMG means technical and regulated fields are familiar ground. If your space is genuinely new to us, we'll say so on the call and tell you honestly how we'd approach it.",
       },
       {
         question: "How do you measure success?",
         answer:
-          "Every metric gets tracked transparently and reported monthly: posts published, connections made, and audience growth. Strategy stays flexible and gets recalibrated based on real performance.",
+          "Against your goals, set together at the start. For most leaders that means inbound conversations, follower quality and growth, engagement from decision-makers, and opportunities landing in your DMs. You get transparent reporting on posts, connections, and growth, plus a strategy review every two weeks so you always see what's working and where we're heading next.",
       },
       {
         question: "What happens on the discovery call?",
         answer:
-          "A conversation about your goals, your audience, and your current profile. If it's a fit, the next step is agreeing on a package, onboarding, and a start date.",
+          "A focused conversation about where you are now, where you want your presence to go, and whether we're the right fit. We'll talk through your goals, your audience, and the tier or setup that suits you, and you'll leave with a clear sense of the path forward, whether or not we work together. Pricing is shared here too, matched to what you actually need.",
       },
     ],
   },

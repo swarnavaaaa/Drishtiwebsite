@@ -21,16 +21,16 @@ export const FAQ = ({ onOpenBooking }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
-          className="text-center max-w-2xl mx-auto mb-14 space-y-3"
+          className="text-center max-w-3xl mx-auto mb-14 space-y-3"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-mint/50 border border-sage/40 text-forest text-xs sm:text-sm font-semibold uppercase tracking-wider">
             {faq.heading}
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-charcoal font-normal tracking-tight">
-            Clear answers to common questions.
+          <h2 className="font-display text-3xl sm:text-5xl md:text-6xl text-charcoal font-normal tracking-tight leading-[1.12]">
+            {faq.subheading || "Clear answers to common questions."}
           </h2>
-          <p className="text-sm sm:text-base text-charcoal-muted">
-            Everything you need to know about partnering with netwerked for executive ghostwriting.
+          <p className="text-base sm:text-lg md:text-xl text-charcoal-muted max-w-2xl mx-auto pt-2 leading-relaxed">
+            {faq.subtext}
           </p>
         </motion.div>
 
@@ -52,7 +52,7 @@ export const FAQ = ({ onOpenBooking }) => {
                   className="w-full p-5 sm:p-7 min-h-[56px] text-left flex items-start justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
                   aria-expanded={isOpen}
                 >
-                  <span className={`font-sans font-bold text-base sm:text-lg tracking-tight transition-colors duration-200 ${
+                  <span className={`font-sans font-bold text-lg sm:text-xl tracking-tight transition-colors duration-200 ${
                     isOpen ? 'text-forest' : 'text-charcoal'
                   }`}>
                     {item.question}
@@ -75,7 +75,7 @@ export const FAQ = ({ onOpenBooking }) => {
                       transition={{ duration: 0.25, ease: "easeOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 sm:px-7 pb-6 text-sm text-charcoal/85 leading-relaxed border-t border-charcoal-border/40 pt-4 font-normal">
+                      <div className="px-5 sm:px-7 pb-6 text-[15px] sm:text-base text-charcoal/85 leading-relaxed border-t border-charcoal-border/40 pt-4 font-normal">
                         {item.answer}
                       </div>
                     </motion.div>
@@ -87,16 +87,16 @@ export const FAQ = ({ onOpenBooking }) => {
         </div>
 
         {/* Bottom Question Help */}
-        <div className="mt-12 text-center">
-          <p className="text-xs sm:text-sm text-charcoal-muted">
-            Have a specific scenario not covered above?{' '}
+        <div className="mt-14 text-center">
+          <p className="text-sm sm:text-base text-charcoal-muted">
+            {faq.footerText || "Have a specific scenario to talk through?"}{' '}
             <a
               href={websiteContent.brand.calendlyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-forest font-bold underline underline-offset-4 hover:text-forest-dark cursor-pointer"
+              className="text-forest font-bold underline underline-offset-4 hover:text-forest-dark transition-colors cursor-pointer"
             >
-              Ask Drishti directly on a discovery call
+              {faq.footerLinkText || "Ask Drishti directly on a discovery call."}
             </a>
           </p>
         </div>
