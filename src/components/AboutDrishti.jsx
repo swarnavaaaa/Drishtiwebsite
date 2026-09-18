@@ -17,7 +17,7 @@ export const AboutDrishti = ({ onOpenBooking }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="inline-flex items-center gap-2 px-3 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-semibold uppercase tracking-wider mb-6"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-mint/50 border border-sage/40 text-forest text-xs sm:text-sm font-semibold uppercase tracking-wider mb-6"
         >
           {about.eyebrow}
         </motion.div>
@@ -33,15 +33,15 @@ export const AboutDrishti = ({ onOpenBooking }) => {
             transition={{ duration: 0.45 }}
             className="space-y-6"
           >
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-charcoal font-normal tracking-tight leading-[1.15]">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-charcoal font-normal tracking-tight leading-[1.15]">
               {about.greeting}
             </h2>
 
-            <div className="space-y-5 text-sm sm:text-base text-charcoal/85 leading-relaxed font-normal">
+            <div className="space-y-5 text-[15px] sm:text-base md:text-[17px] text-charcoal/85 leading-relaxed font-normal">
               {about.paragraphs.map((paragraph, idx) => (
                 <p
                   key={idx}
-                  className={idx === 0 ? 'text-base sm:text-lg text-charcoal font-medium leading-relaxed' : ''}
+                  className={idx === 0 ? 'text-base sm:text-lg md:text-xl text-charcoal font-medium leading-relaxed' : ''}
                 >
                   {paragraph}
                 </p>
@@ -57,23 +57,23 @@ export const AboutDrishti = ({ onOpenBooking }) => {
             transition={{ duration: 0.45, delay: 0.08 }}
             className="p-6 sm:p-7 bg-white/90 backdrop-blur-xs border border-charcoal-border shadow-card space-y-3.5 hover:border-forest/40 transition-colors"
           >
-            <div className="text-xs font-bold uppercase tracking-wider text-forest font-mono">
-              Verified Track Record
+            <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-forest font-mono">
+              Track Record
             </div>
-            <div className="flex flex-wrap gap-2.5 text-xs font-medium text-charcoal">
+            <div className="flex flex-wrap gap-2.5 text-xs sm:text-sm font-medium text-charcoal">
               <span className="px-3 py-1.5 bg-mint/50 border border-sage/40 hover:bg-mint transition-colors">
-                <strong className="text-forest"><CountUp value="92,700+" /></strong> Organic Followers
+                <strong className="text-forest"><CountUp value="95,000+" /></strong> Organic Followers
               </span>
               <span className="px-3 py-1.5 bg-mint/50 border border-sage/40 hover:bg-mint transition-colors">
-                <strong className="text-forest"><CountUp value="200+" /></strong> Brand Partnerships
+                <strong className="text-forest"><CountUp value="300+" /></strong> Brand Partnerships
               </span>
               <span className="px-3 py-1.5 bg-mint/50 border border-sage/40 hover:bg-mint transition-colors">
                 <strong className="text-forest"><CountUp value="3M+" />/mo</strong> Impressions
               </span>
               <span className="px-3 py-1.5 bg-mint/50 border border-sage/40 hover:bg-mint transition-colors">
-                <strong className="text-forest">#2</strong> Sports Content on Favikon
+                <strong className="text-forest">#2</strong> Sports Content Worldwide
               </span>
-              <span className="px-3 py-1.5 bg-mint/50 border border-sage/40 hover:bg-mint transition-colors">
+              <span className="px-3 py-1.5 bg-mint/50 border border-sage/40 hover:bg-mint transition-colors font-semibold">
                 Deloitte & KPMG Alum
               </span>
             </div>
