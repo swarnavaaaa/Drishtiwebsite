@@ -4,16 +4,7 @@ import { motion } from 'framer-motion';
 import { websiteContent } from '../data/websiteContent';
 
 export const Pricing = ({ onOpenBooking }) => {
-  const { pricing } = websiteContent;
-
-  const inclusions = [
-    "Full Profile Optimisation (Headline, About, Banner, Featured)",
-    "Bespoke Content Strategy aligned to your niche & goals",
-    "Ghostwriting in your authentic voice (zero AI shortcuts)",
-    "Targeted manual outreach to ideal buyers & investors",
-    "Monthly transparent reporting (posts, connections, growth)",
-    "Dedicated async channel & monthly strategy calibration calls",
-  ];
+  const { pricing, brand } = websiteContent;
 
   return (
     <section id="pricing" className="py-16 md:py-24 bg-transparent border-b border-charcoal-border/80 relative overflow-hidden">
@@ -25,33 +16,33 @@ export const Pricing = ({ onOpenBooking }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
-          className="max-w-3xl mb-14 space-y-3"
+          className="max-w-4xl mb-14 space-y-3"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-mint/50 border border-sage/40 text-forest text-xs font-semibold uppercase tracking-wider">
-            {pricing.heading}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-mint/50 border border-sage/40 text-forest text-xs sm:text-sm font-semibold uppercase tracking-wider">
+            {pricing.eyebrow || "Packages"}
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-charcoal font-normal tracking-tight">
+          <h2 className="font-display text-3xl sm:text-5xl md:text-6xl text-charcoal font-normal tracking-tight leading-[1.12]">
             Three <span className="italic font-light text-forest">ways in.</span>
           </h2>
-          <p className="text-sm sm:text-base text-charcoal-muted max-w-2xl">
-            Retainers calibrated to your desired growth velocity. Every tier is managed with full confidentiality and bespoke voice craftsmanship.
+          <p className="text-base sm:text-lg md:text-xl text-charcoal-muted max-w-3xl pt-2 leading-relaxed">
+            {pricing.subtext}
           </p>
         </motion.div>
 
         {/* 3 Pricing Tiers Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch mb-14">
           {pricing.tiers.map((tier, index) => {
             const isFeatured = tier.isPopular;
             return (
               <div
                 key={index}
-                className={`p-7 sm:p-8 flex flex-col justify-between transition-transform transition-shadow duration-200 relative ${
+                className={`p-7 sm:p-9 flex flex-col justify-between transition-all duration-200 relative ${
                   isFeatured
                     ? 'bg-forest text-cream border-2 border-forest-dark shadow-2xl scale-[1.01] lg:scale-[1.03] z-10 hover:shadow-brand-hover'
                     : 'bg-white/85 backdrop-blur-xs text-charcoal border border-charcoal-border hover:border-forest/60 hover:shadow-brand hover:-translate-y-1 shadow-card'
                 }`}
               >
-                {/* Popular Badge */}
+                {/* Popular / Status Badge */}
                 {tier.badge && (
                   <div className="absolute -top-3.5 right-6">
                     <span
@@ -69,11 +60,11 @@ export const Pricing = ({ onOpenBooking }) => {
                 <div className="space-y-6">
                   {/* Tier Title & Volume */}
                   <div className="pb-4 border-b border-current/15">
-                    <h3 className="font-display text-2xl font-medium tracking-tight">
+                    <h3 className="font-display text-2xl sm:text-3xl font-medium tracking-tight">
                       {tier.name}
                     </h3>
                     <div
-                      className={`font-mono text-sm font-bold uppercase tracking-wider mt-1 ${
+                      className={`font-mono text-sm sm:text-[15px] font-bold uppercase tracking-wider mt-1.5 ${
                         isFeatured ? 'text-mint' : 'text-forest'
                       }`}
                     >
@@ -83,11 +74,11 @@ export const Pricing = ({ onOpenBooking }) => {
 
                   {/* Pitch & Ideal Fit */}
                   <div className="space-y-3">
-                    <p className="font-sans font-bold text-base tracking-tight leading-snug">
+                    <p className="font-sans font-bold text-lg sm:text-xl tracking-tight leading-snug">
                       {tier.pitch}
                     </p>
                     <p
-                      className={`text-xs sm:text-sm leading-relaxed font-normal ${
+                      className={`text-sm sm:text-[15px] leading-relaxed font-normal ${
                         isFeatured ? 'text-cream/80' : 'text-charcoal/80'
                       }`}
                     >
@@ -99,10 +90,10 @@ export const Pricing = ({ onOpenBooking }) => {
                 {/* Card Bottom CTA (Min 48px tap target) */}
                 <div className="pt-8 mt-8 border-t border-current/15">
                   <a
-                    href={websiteContent.brand.calendlyUrl}
+                    href={brand?.calendlyUrl || websiteContent.brand.calendlyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-full inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-brand ${
+                    className={`w-full inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-brand ${
                       isFeatured
                         ? 'bg-mint text-forest hover:bg-cream active:scale-[0.99]'
                         : 'bg-forest text-cream hover:bg-forest-light active:scale-[0.99]'
@@ -130,24 +121,29 @@ export const Pricing = ({ onOpenBooking }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
-          className="p-7 sm:p-8 bg-white/90 backdrop-blur-xs border border-charcoal-border shadow-card hover:border-forest/40 transition-colors"
+          className="p-7 sm:p-9 bg-white/90 backdrop-blur-xs border border-charcoal-border shadow-card hover:border-forest/40 transition-colors space-y-6"
         >
-          <div className="max-w-3xl mb-6">
-            <h4 className="font-display text-xl text-charcoal font-medium">
-              Every retainer tier includes the complete netwerked infrastructure:
+          <div className="max-w-3xl">
+            <h4 className="font-display text-2xl sm:text-3xl text-charcoal font-medium tracking-tight">
+              {pricing.inclusionsTitle}
             </h4>
-            <p className="text-xs sm:text-sm text-charcoal-muted mt-1">
-              {pricing.inclusionsNote}
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5">
-            {inclusions.map((item, idx) => (
-              <div key={idx} className="flex items-start gap-2.5 text-xs text-charcoal/90">
-                <Check className="w-4 h-4 text-forest flex-shrink-0 mt-0.5" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {pricing.inclusions.map((item, idx) => (
+              <div key={idx} className="flex items-start gap-2.5 text-sm sm:text-[15px] text-charcoal/90 font-medium">
+                <Check className="w-4 h-4 text-forest flex-shrink-0 mt-0.5 stroke-[2.5]" />
                 <span>{item}</span>
               </div>
             ))}
+          </div>
+
+          {/* Add-ons Footer Note */}
+          <div className="pt-6 border-t border-charcoal-border/40 flex flex-col sm:flex-row items-start sm:items-center gap-3 text-xs sm:text-sm font-mono text-charcoal-muted">
+            <span className="px-2.5 py-1 bg-mint/50 border border-sage/40 text-forest font-bold uppercase tracking-wider shrink-0">
+              Add-Ons
+            </span>
+            <span>{pricing.addonsNote}</span>
           </div>
         </motion.div>
 

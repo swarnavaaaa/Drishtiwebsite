@@ -399,35 +399,47 @@ Resonance first. Reach follows.`,
   },
 
   pricing: {
-    heading: "Pricing",
+    eyebrow: "Packages",
+    heading: "Packages",
     subheading: "Three ways in.",
+    subtext:
+      "Retainers built around how fast you want to grow. Every tier is fully confidential and written in your real voice.",
     tiers: [
       {
         name: "Starter",
-        volume: "8 posts per month",
+        volume: "8 POSTS PER MONTH",
         pitch: "Steady, credible presence that compounds.",
         idealFor: "Best for building a credible presence and a steady flow of the right conversations.",
         badge: null,
       },
       {
         name: "Momentum",
-        volume: "12 posts per month",
-        pitch: "Faster growth and a fuller pipeline.",
-        idealFor: "Best for founders ready to grow faster and build a fuller outreach pipeline.",
-        badge: "Most Chosen",
+        volume: "12 POSTS PER MONTH",
+        pitch: "Faster growth and a fuller presence.",
+        idealFor: "Best for founders ready to grow faster and show up across every content pillar.",
+        badge: "MOST CHOSEN",
         isPopular: true,
       },
       {
         name: "Authority",
-        volume: "16 posts per month",
-        pitch: "Owning the category, inbound and outbound.",
-        idealFor: "Best for leaders ready to own their category and maximise inbound and outbound reach.",
-        badge: "Maximum Impact",
+        volume: "16 POSTS PER MONTH",
+        pitch: "Owning the category, top of mind.",
+        idealFor: "Best for leaders ready to own their category with near-daily presence.",
+        badge: "MAXIMUM IMPACT",
       },
     ],
-    inclusionsNote:
-      "Every tier includes profile optimisation, content strategy, ghostwriting in your voice, targeted outreach to your ideal audience, and monthly reporting on posts, connections made, and growth. Investment is shared on a discovery call.",
-    cta: "Book a Call to Discuss Pricing",
+    inclusionsTitle: "Every retainer, whichever tier, includes:",
+    inclusions: [
+      "Full Profile Optimisation — Headline, About, Banner, and Featured",
+      "Bespoke Content Strategy aligned to your niche and goals",
+      "Content written in your real voice, by hand",
+      "Bi-weekly strategy check-ins and performance review",
+      "Dedicated async channel for day-to-day",
+      "Transparent reporting on posts, growth, and engagement",
+    ],
+    addonsNote:
+      "Available as add-ons: targeted outreach on LinkedIn, lead generation via Sales Navigator, and content or full account management on X.",
+    cta: "BOOK A CALL TO DISCUSS PRICING",
   },
 
   faq: {
