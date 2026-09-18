@@ -219,79 +219,68 @@ Resonance first. Reach follows.`,
   },
 
   services: {
+    eyebrow: "SERVICES",
     heading: "Services",
     subheading: "Your LinkedIn, handled fully.",
-    quote: "“We write as you, not for you.”",
-    description:
-      "Content strategy built around your goals, ghostwriting in your real voice, and outreach that builds real relationships. Momentum that compounds month over month.",
-    pillars: [
+    tagline: "“We write as you, not for you.”",
+    subtext:
+      "Content strategy and writing in your real voice, structured around how hands-on you want me to be. Pick the model that fits, add what you need.",
+    modelsSectionTitle: "Two ways to work",
+    models: [
       {
         number: "01",
-        title: "Strategy",
+        title: "Content Creation",
         description:
-          "Content pillars built around your work, your goals, and exactly who you want reading. We map your niche and craft a strategy aligned to your audience.",
-        details: [
-          "Target audience & ICP persona mapping",
-          "Differentiated content pillar architecture",
-          "Cadence planning & narrative arc roadmap",
+          "I build the strategy and write everything in your voice. You publish on your own schedule and run your own engagement. Ideal if you like to stay hands-on with your account.",
+        deliverables: [
+          "Content pillars and calendar built around your goals",
+          "Posts written in your voice, ready to publish",
+          "You post and engage, fully in your control",
         ],
       },
       {
         number: "02",
-        title: "Ghostwriting in Your Voice",
+        title: "Complete Account Management",
         description:
-          "Every post sounds like you. Shaped through onboarding, sharpened through constant calibration, and reviewed by you before it goes live.",
-        details: [
-          "In-depth voice onboarding interview",
-          "End-to-end drafting, hooks & formatting",
-          "Iterative calibration until 100% authentic",
-        ],
-      },
-      {
-        number: "03",
-        title: "Profile Optimisation",
-        description:
-          "Headline, About, banner, and Featured section sharpened so every visitor lands somewhere that converts. It starts with a diagnostic audit of what's broken, missing, or unclear.",
-        details: [
-          "Comprehensive diagnostic profile audit",
-          "High-converting Headline & About copy",
-          "Custom visual banner & featured link curation",
-        ],
-      },
-      {
-        number: "04",
-        title: "Targeted Outreach",
-        description:
-          "Warm requests and messages that put you directly in front of the right buyers, investors, and collaborators. Always personal, always manual.",
-        details: [
-          "Curated connection target lists",
-          "Bespoke, non-spammy conversation starters",
-          "Relationship tracking & follow-up routing",
+          "Full done-for-you. I have access, I post on schedule, I engage with the right comments on your posts, and I handle messages whenever you want me to step in. You show up as active and present while I run the account.",
+        deliverables: [
+          "Everything in Content Creation",
+          "Posting handled end to end",
+          "Active engagement on relevant comments",
+          "Message handling on request",
         ],
       },
     ],
-    approach: {
-      heading: "Our Approach",
-      tagline: "We read first, then we write.",
-      intro:
-        "Your profile, your work, and the audience you want to reach shape every post before a word gets written. The approach rests on three beliefs.",
-      beliefs: [
-        {
-          title: "Specificity Carries a Brand",
-          description:
-            "A post that shows a real decision, a sharp opinion, or an honest lesson earns attention and trust. We write for resonance first, reach second.",
-        },
-        {
-          title: "Consistency Compounds",
-          description:
-            "LinkedIn rewards leaders who show up regularly with original, relevant thinking. Steady presence turns a strong profile into a growing one.",
-        },
-        {
-          title: "The Voice Stays Yours",
-          description:
-            "Every post sounds like you, built through onboarding, ongoing calibration, and a genuine understanding of how you think and speak.",
-        },
-      ],
+    includedTitle: "Included in every retainer",
+    included: [
+      {
+        title: "Profile Optimisation",
+        description: "headline, About, banner, and Featured section built to convert",
+      },
+      {
+        title: "Content Strategy",
+        description: "pillars, positioning, and narrative direction",
+      },
+      {
+        title: "Bi-weekly check-ins",
+        description: "to review performance and plan ahead",
+      },
+    ],
+    addonsTitle: "Optional add-ons",
+    addons: [
+      {
+        title: "Targeted Outreach",
+        description: "personal, manual outreach to a curated list on LinkedIn",
+      },
+      {
+        title: "Lead Generation",
+        description: "precision prospecting at scale through Sales Navigator",
+      },
+    ],
+    additionalPlatformTitle: "Additional platform",
+    additionalPlatform: {
+      platform: "X",
+      description: "content creation or complete account management, same standard as LinkedIn",
     },
   },
 
