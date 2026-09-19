@@ -138,12 +138,14 @@ export const Pricing = ({ onOpenBooking }) => {
             ))}
           </div>
 
-          {/* Add-ons Footer Note */}
-          <div className="pt-6 border-t border-charcoal-border/40 flex flex-col sm:flex-row items-start sm:items-center gap-3 text-xs sm:text-sm font-mono text-charcoal font-medium">
-            <span className="px-2.5 py-1 bg-mint/50 border border-sage/40 text-forest font-bold uppercase tracking-wider shrink-0">
+          {/* Add-ons Box within the bigger box */}
+          <div className="p-4 sm:p-5 bg-cream-subtle/70 border border-charcoal-border/70 hover:border-forest/40 transition-colors flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+            <span className="px-2.5 py-1 bg-mint/60 border border-sage/50 text-forest font-mono font-bold text-xs uppercase tracking-wider shrink-0">
               Add-Ons
             </span>
-            <span>{pricing.addonsNote}</span>
+            <span className="text-xs sm:text-sm font-mono text-charcoal font-medium leading-relaxed">
+              {pricing.addonsNote}
+            </span>
           </div>
         </motion.div>
 
