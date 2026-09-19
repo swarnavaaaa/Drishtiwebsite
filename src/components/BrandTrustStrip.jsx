@@ -27,21 +27,23 @@ export const BrandTrustStrip = () => {
           {brandLogosRow.brands.map((brand, idx) => (
             <div
               key={`b1-${idx}`}
-              className="flex-shrink-0 flex items-center gap-2.5 sm:gap-3 px-4 sm:px-5 py-2.5 sm:py-3 bg-white border border-charcoal-border/80 hover:border-forest/60 hover:shadow-xs transition-all duration-200 group cursor-default"
+              className="flex-shrink-0 flex flex-col items-center justify-center min-w-[130px] sm:min-w-[155px] px-4 sm:px-5 py-3.5 sm:py-4 bg-white border border-charcoal-border/80 hover:border-forest/60 hover:shadow-xs transition-all duration-200 group cursor-default text-center"
             >
-              {brand.logo ? (
-                <div className="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center shrink-0">
+              <div className="h-9 sm:h-11 w-full flex items-center justify-center mb-2">
+                {brand.logo ? (
                   <img
                     src={brand.logo}
                     alt={`${brand.name} logo`}
-                    className="max-h-full max-w-full object-contain"
+                    className="max-h-full max-w-[100px] sm:max-w-[120px] object-contain transition-transform duration-200 group-hover:scale-105"
                     loading="lazy"
                   />
-                </div>
-              ) : (
-                <div className="w-2 h-2 rounded-full bg-forest shrink-0" />
-              )}
-              <span className="font-sans font-bold text-sm sm:text-base text-charcoal tracking-tight group-hover:text-forest transition-colors whitespace-nowrap">
+                ) : (
+                  <div className="w-8 h-8 rounded-full bg-mint/60 border border-sage/50 flex items-center justify-center text-forest font-mono font-bold text-sm">
+                    +
+                  </div>
+                )}
+              </div>
+              <span className="font-sans font-bold text-xs sm:text-sm text-charcoal tracking-tight group-hover:text-forest transition-colors whitespace-nowrap">
                 {brand.name}
               </span>
             </div>
@@ -50,21 +52,23 @@ export const BrandTrustStrip = () => {
             <div
               key={`b2-${idx}`}
               aria-hidden="true"
-              className="flex-shrink-0 flex items-center gap-2.5 sm:gap-3 px-4 sm:px-5 py-2.5 sm:py-3 bg-white border border-charcoal-border/80 hover:border-forest/60 hover:shadow-xs transition-all duration-200 group cursor-default"
+              className="flex-shrink-0 flex flex-col items-center justify-center min-w-[130px] sm:min-w-[155px] px-4 sm:px-5 py-3.5 sm:py-4 bg-white border border-charcoal-border/80 hover:border-forest/60 hover:shadow-xs transition-all duration-200 group cursor-default text-center"
             >
-              {brand.logo ? (
-                <div className="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center shrink-0">
+              <div className="h-9 sm:h-11 w-full flex items-center justify-center mb-2">
+                {brand.logo ? (
                   <img
                     src={brand.logo}
                     alt=""
-                    className="max-h-full max-w-full object-contain"
+                    className="max-h-full max-w-[100px] sm:max-w-[120px] object-contain transition-transform duration-200 group-hover:scale-105"
                     loading="lazy"
                   />
-                </div>
-              ) : (
-                <div className="w-2 h-2 rounded-full bg-forest shrink-0" />
-              )}
-              <span className="font-sans font-bold text-sm sm:text-base text-charcoal tracking-tight group-hover:text-forest transition-colors whitespace-nowrap">
+                ) : (
+                  <div className="w-8 h-8 rounded-full bg-mint/60 border border-sage/50 flex items-center justify-center text-forest font-mono font-bold text-sm">
+                    +
+                  </div>
+                )}
+              </div>
+              <span className="font-sans font-bold text-xs sm:text-sm text-charcoal tracking-tight group-hover:text-forest transition-colors whitespace-nowrap">
                 {brand.name}
               </span>
             </div>
