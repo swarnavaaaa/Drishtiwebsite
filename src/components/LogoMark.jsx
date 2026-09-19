@@ -62,7 +62,7 @@ export const LogoMark = ({
       <span className={`font-sans font-extrabold tracking-tight ${textSize} ${
         textClassName ? textClassName : (isDark ? "text-cream" : "text-charcoal")
       }`}>
-        netwerked<span className={isDark ? "text-mint" : "text-forest"}>.</span>
+        netwerked
       </span>
     </div>
   );

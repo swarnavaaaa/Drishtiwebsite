@@ -39,10 +39,7 @@ export const AboutDrishti = ({ onOpenBooking }) => {
 
             <div className="space-y-5 text-base sm:text-lg md:text-[19px] text-charcoal leading-relaxed font-normal">
               {about.paragraphs.map((paragraph, idx) => (
-                <p
-                  key={idx}
-                  className={idx === 0 ? 'text-lg sm:text-xl md:text-2xl text-charcoal font-medium leading-relaxed' : ''}
-                >
+                <p key={idx}>
                   {paragraph}
                 </p>
               ))}

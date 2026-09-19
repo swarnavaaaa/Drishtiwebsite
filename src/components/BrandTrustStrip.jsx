@@ -27,28 +27,46 @@ export const BrandTrustStrip = () => {
           {brandLogosRow.brands.map((brand, idx) => (
             <div
               key={`b1-${idx}`}
-              className="flex-shrink-0 px-5 py-3 bg-white border border-charcoal-border/80 text-center hover:border-forest/60 hover:shadow-xs transition-all duration-200 group cursor-default min-w-[140px] sm:min-w-[160px]"
+              className="flex-shrink-0 flex items-center gap-2.5 sm:gap-3 px-4 sm:px-5 py-2.5 sm:py-3 bg-white border border-charcoal-border/80 hover:border-forest/60 hover:shadow-xs transition-all duration-200 group cursor-default"
             >
-              <div className="font-sans font-extrabold text-sm sm:text-base text-charcoal tracking-tight group-hover:text-forest transition-colors">
+              {brand.logo ? (
+                <div className="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center shrink-0">
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    className="max-h-full max-w-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <div className="w-2 h-2 rounded-full bg-forest shrink-0" />
+              )}
+              <span className="font-sans font-bold text-sm sm:text-base text-charcoal tracking-tight group-hover:text-forest transition-colors whitespace-nowrap">
                 {brand.name}
-              </div>
-              <div className="text-xs font-mono font-medium text-charcoal-muted uppercase tracking-wider mt-0.5">
-                {brand.category.split(' ')[0]}
-              </div>
+              </span>
             </div>
           ))}
           {brandLogosRow.brands.map((brand, idx) => (
             <div
               key={`b2-${idx}`}
               aria-hidden="true"
-              className="flex-shrink-0 px-5 py-3 bg-white border border-charcoal-border/80 text-center hover:border-forest/60 hover:shadow-xs transition-all duration-200 group cursor-default min-w-[140px] sm:min-w-[160px]"
+              className="flex-shrink-0 flex items-center gap-2.5 sm:gap-3 px-4 sm:px-5 py-2.5 sm:py-3 bg-white border border-charcoal-border/80 hover:border-forest/60 hover:shadow-xs transition-all duration-200 group cursor-default"
             >
-              <div className="font-sans font-extrabold text-sm sm:text-base text-charcoal tracking-tight group-hover:text-forest transition-colors">
+              {brand.logo ? (
+                <div className="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center shrink-0">
+                  <img
+                    src={brand.logo}
+                    alt=""
+                    className="max-h-full max-w-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <div className="w-2 h-2 rounded-full bg-forest shrink-0" />
+              )}
+              <span className="font-sans font-bold text-sm sm:text-base text-charcoal tracking-tight group-hover:text-forest transition-colors whitespace-nowrap">
                 {brand.name}
-              </div>
-              <div className="text-xs font-mono font-medium text-charcoal-muted uppercase tracking-wider mt-0.5">
-                {brand.category.split(' ')[0]}
-              </div>
+              </span>
             </div>
           ))}
         </div>

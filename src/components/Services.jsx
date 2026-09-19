@@ -133,7 +133,7 @@ export const Services = ({ onOpenBooking }) => {
                   </span>
                 </div>
                 <p className="text-sm text-charcoal-muted pl-4 leading-relaxed">
-                  — {item.description}
+                  {item.description}
                 </p>
               </div>
             ))}
@@ -175,7 +175,7 @@ export const Services = ({ onOpenBooking }) => {
                       </span>
                     </div>
                     <p className="text-base text-charcoal-muted pl-6 leading-relaxed">
-                      — {addon.description}
+                      {addon.description}
                     </p>
                   </div>
                 ))}
@@ -215,11 +215,11 @@ export const Services = ({ onOpenBooking }) => {
                     {services.additionalPlatform.platform}
                   </span>
                   <span className="font-sans font-bold text-lg sm:text-xl text-charcoal">
-                    Platform Management
+                    {services.additionalPlatform.title || 'X (formerly Twitter)'}
                   </span>
                 </div>
                 <p className="text-base sm:text-lg text-charcoal leading-relaxed pt-1">
-                  — {services.additionalPlatform.description}
+                  {services.additionalPlatform.description}
                 </p>
               </div>
             </div>

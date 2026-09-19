@@ -79,7 +79,7 @@ html.lenis, html.lenis body {
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 28s linear infinite;
+  animation: marquee 42s linear infinite;
 }
 
 .animate-marquee:hover {
