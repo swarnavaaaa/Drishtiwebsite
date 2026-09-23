@@ -59,7 +59,7 @@ export const AboutDrishti = ({ onOpenBooking }) => {
             </div>
             <div className="flex flex-wrap gap-2.5 text-xs sm:text-sm font-medium text-charcoal">
               <span className="px-3 py-1.5 bg-mint/50 border border-sage/40 hover:bg-mint transition-colors">
-                <strong className="text-forest"><CountUp value="95,000+" /></strong> Organic Followers
+                <strong className="text-forest"><CountUp value="90,000+" /></strong> Organic Followers
               </span>
               <span className="px-3 py-1.5 bg-mint/50 border border-sage/40 hover:bg-mint transition-colors">
                 <strong className="text-forest"><CountUp value="300+" /></strong> Brand Partnerships

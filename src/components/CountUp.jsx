@@ -20,7 +20,7 @@ export const CountUp = ({ value, duration = 1.6, className = "" }) => {
 
     const stringVal = String(value);
 
-    // If stringVal contains an arrow like "5K → 95K+", animate the part after the arrow
+    // If stringVal contains an arrow like "5K → 90K+", animate the part after the arrow
     let staticLead = "";
     let parseTarget = stringVal;
 

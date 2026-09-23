@@ -26,11 +26,11 @@ export const websiteContent = {
     description:
       "Netwerked turns your expertise into the reputation your industry recognizes. Every post builds recall, so your name is the first that comes to mind. Clients, investors, talent, and press start reaching out on their own.",
     descriptionSecondary:
-      "Built on the exact playbook that took the founder's LinkedIn from 5,000 to 95,000+ followers organically.",
+      "Built on the exact playbook that took the founder's LinkedIn from 5,000 to 90,000+ followers organically.",
     primaryCta: "Book a Discovery Call",
     secondaryCta: "See Our Work",
     stats: [
-      { value: "5K → 95K+", label: "ORGANIC GROWTH" },
+      { value: "5K → 90K+", label: "ORGANIC GROWTH" },
       { value: "3M+", label: "IMPRESSIONS EVERY MONTH" },
       { value: "300+", label: "BRAND COLLABORATIONS" },
     ],
@@ -153,7 +153,7 @@ Resonance first. Reach follows.`,
     greeting: "Hi, I'm Drishti.",
     paragraphs: [
       "I've spent years telling stories of human potential. I started on LinkedIn while I was a risk consultant at Deloitte, writing about the grit, the comebacks, and the people behind the wins, most often through sports.",
-      "People read. Then thousands did. Three years on, that one habit became a 95,000+ strong community, 3M+ monthly impressions for 36 months straight, and a #2 worldwide ranking for sports content on LinkedIn.",
+      "People read. Then thousands did. Three years on, that one habit became a 90,000+ strong community, 3M+ monthly impressions for 36 months straight, and a #2 worldwide ranking for sports content on LinkedIn.",
       "Then founders started asking me to help them write their own. So I built Netwerked.",
       "Netwerked is a LinkedIn growth studio for founders, CXOs, and senior leaders who want LinkedIn to do real work: generate inbound interest, attract talent, warm up rooms before sales calls, and position you for what comes next.",
       "I'm a storyteller, through and through. I write about human potential, sports, marketing, entrepreneurship, and branding, and the strange overlap of all five.",
@@ -163,7 +163,7 @@ Resonance first. Reach follows.`,
       "Currently working with founders and leaders across finance, AI and tech, sports, market research, consulting, and hospitality.",
     ],
     proofStats: [
-      { label: "Organic Followers", value: "95,000+" },
+      { label: "Organic Followers", value: "90,000+" },
       { label: "Brand Partnerships", value: "300+" },
       { label: "Monthly Impressions", value: "3M+/mo" },
       { label: "Sports Content Worldwide", value: "#2" },
